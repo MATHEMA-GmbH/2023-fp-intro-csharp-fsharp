@@ -1,5 +1,5 @@
 {
-  "name": "modern-linux-cli-tools",
+  "name": "fp-intro-csharp-fsharp",
   "private": true,
   "scripts": {
     "build": "slidev build",
