@@ -8,5 +8,5 @@
 
 ## Run presentation
 
-- [`start-presentation.sh`](`start-presentation.sh`): This is just a shorthand for `npm run dev`
+- [`./start-presentation.sh`](./start-presentation.sh): This is currently just a shorthand for `npm run dev`
 - visit http://localhost:3030
