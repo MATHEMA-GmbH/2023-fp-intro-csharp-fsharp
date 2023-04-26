@@ -1,3 +1,1 @@
-## Vorstellungsrunde
-## &
-## Erwartungen
+## Vorstellungsrunde & Erwartungen
