@@ -1,30 +1,3 @@
----
-title: Von C# nach F#...
-theme: sky
-revealOptions:
-    transition: 'fade'
-    controls: false
-    progress: false
-    autoPlayMedia: true
-    transitionSpeed: slow
-
----
-
-FILE: 01-intro.md
-
----
-
-FILE: vorstellungsrunde_und_erwartungen.md
-
----
-
-FILE: lernziele.md
-
----
-
-FILE: mob-programming.md
-
----
 
 FILE: demo-app-intro.md
 
