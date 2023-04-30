@@ -1,13 +1,4 @@
 
-FILE: 02-fp-basics_und_immutability.md
-
----
-
-FILE: anforderung_vorname_darf_niemals_leer_sein.md
-
----
-
-FILE: value-objects.md
 
 ---
 

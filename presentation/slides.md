@@ -29,3 +29,11 @@ src: ./pages/demo-app-intro.md
 ---
 src: ./pages/02-fp-basics_und_immutability.md
 ---
+
+---
+src: ./pages/anforderung_vorname_darf_niemals_leer_sein.md
+---
+
+---
+src: ./pages/value-objects.md
+---
