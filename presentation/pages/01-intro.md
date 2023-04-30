@@ -7,9 +7,9 @@ layout: two-cols
 - Software Entwickler
 - Beruflich: C#
 - Interessen:
+    - Funktionale Programmierung
     - Software Crafting
     - Domain-Driven Design
-    - Funktionale Programmierung
 
 ::right::
 
