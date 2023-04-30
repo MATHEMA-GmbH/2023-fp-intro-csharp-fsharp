@@ -1,12 +1,4 @@
 
-FILE: demo-app-intro.md
-
----
-
-FILE: letscode.md
-
----
-
 FILE: 02-fp-basics_und_immutability.md
 
 ---

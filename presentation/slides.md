@@ -21,3 +21,11 @@ src: ./pages/lernziele.md
 ---
 src: ./pages/mob-programming.md
 ---
+
+---
+src: ./pages/demo-app-intro.md
+---
+
+---
+src: ./pages/02-fp-basics_und_immutability.md
+---
