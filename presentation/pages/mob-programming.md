@@ -7,8 +7,6 @@
 - Mob: Unterstützt den Navigator
 - Regelmäßiger Wechsel (5-10min)
 
-./images/mob-programming-setup.png
-
 <img
   class="absolute top-10 right-10 w-100"
   src="/images/mob-programming-setup.png"
