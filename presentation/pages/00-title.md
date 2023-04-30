@@ -1,6 +1,6 @@
-# modern linux cli tools
+<h1>Von C# zu F#<br/>Einführung in die Funktionale Programmierung</h1>
 
-Patrick Drechsler
+Patrick Drechsler & Martin Grotz
 
 <img
   class="absolute top-20 left-10 w-xs"
@@ -14,8 +14,8 @@ Patrick Drechsler
 
 
 <img
-  class="absolute bottom-10 right-120 w-50"
-  src="/images/logo-ddf.png"
+  class="absolute bottom-10 right-50 w-50"
+  src="/images/logo-magdeburger-devdays-2023.png"
 />
 
 <style>
@@ -24,6 +24,8 @@ Patrick Drechsler
     background-image: none;
     color: black;
     padding-left: 0;
+    font-size: 40px;
+    margin-top:50px;
 }
 p {
     color: black;

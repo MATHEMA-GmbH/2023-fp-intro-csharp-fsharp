@@ -3,7 +3,7 @@ theme: 'default'
 title: 'fp c# to f#'
 canvasWidth: 980
 
-src: ./pages/title.md
+src: ./pages/00-title.md
 ---
 
 ---
