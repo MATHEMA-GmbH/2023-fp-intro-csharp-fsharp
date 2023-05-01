@@ -1,15 +1,5 @@
 
 
----
-
-FILE: anforderung_vorname_darf_niemals_leer_sein.md
-
----
-
-FILE: letscode.md
-
----
-
 FILE: 02-fp-basics_first_class_functions.md
 
 ---

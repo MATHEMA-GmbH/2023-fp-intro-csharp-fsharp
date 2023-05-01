@@ -37,3 +37,16 @@ src: ./pages/anforderung_vorname_darf_niemals_leer_sein.md
 ---
 src: ./pages/value-objects.md
 ---
+
+---
+src: ./pages/letscode.md
+---
+
+---
+src: ./pages/anforderung_vorname_darf_niemals_leer_sein.md
+---
+
+---
+src: ./pages/02-fp-basics_first_class_functions.md
+---
+
