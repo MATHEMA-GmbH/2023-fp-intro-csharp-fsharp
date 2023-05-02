@@ -1,8 +1,22 @@
 ---
-theme: 'default'
-title: 'fp c# to f#'
+theme: ./mathema-2023
+
+defaults:
+  layout: "default-with-footer"
+
+# infos for the footer (on slides with the default-with-footer layout)
+occasion: "MD-DevDays 2023"
+occasionLogoUrl: "images/logo-magdeburger-devdays-2023.png"
+company: "MATHEMA GmbH"
+presenter: "Patrick Drechsler & Martin Grotz"
+contact: "patrick.drechsler@mathema.de & martin.grotz@mathema.de"
+
+info: |
+  ## Von C# zu F# – Einführung in die funktionale Programmierung
+
 canvasWidth: 980
 
+layout: cover
 src: ./pages/00-title.md
 ---
 

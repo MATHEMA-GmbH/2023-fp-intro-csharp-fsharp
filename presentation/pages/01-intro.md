@@ -19,10 +19,6 @@ layout: two-cols
 - Beruflich: C#, TypeScript/JavaScript
 - Interessen:
     - Funktionale Programmierung
-    - TODO
+    - Web&Mobile Development
+    - Soft Skills
 
-
-<img
-  class="absolute bottom-10 right-50 w-50"
-  src="/images/logo-magdeburger-devdays-2023.png"
-/>

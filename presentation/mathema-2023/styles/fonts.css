@@ -1,0 +1,29 @@
+/* Font for main headline(s) h1-h3 */
+@font-face {
+  font-family: DroidSerif;
+  src: url("theme/fonts/DroidSerif-Regular.ttf");
+}
+
+/* Font for headlines h4-h6 */
+@font-face {
+  font-family: InterSemibold;
+  src: url("theme/fonts/Inter-SemiBold.woff");
+}
+
+/* Font for quotes */
+@font-face {
+  font-family: DroidSerifItalic;
+  src: url("theme/fonts/DroidSerif-Italic.ttf");
+}
+
+/* Font for normal text */
+@font-face {
+  font-family: Inter;
+  src: url("theme/fonts/Inter-Regular.woff");
+}
+
+/* Font for code */
+@font-face {
+  font-family: AnonPro;
+  src: url("theme/fonts/AnonymousPro-Regular.ttf");
+}

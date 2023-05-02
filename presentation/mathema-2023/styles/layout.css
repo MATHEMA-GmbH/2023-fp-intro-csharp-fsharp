@@ -1,0 +1,88 @@
+:root {
+  --slidev-theme-primary: #c5003e;
+  --slidev-theme-gray: gray;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.slidev-layout {
+  font-size: 1.2rem;
+
+  h1, h2 {
+    background-image: url(theme/mat-pictogram-rgb.png);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position-y: center;
+    padding-left: 70px;
+    line-height: 70px;
+  }
+
+  h1, h2, h3 {
+    font-family: DroidSerif;
+    margin-bottom: 0.5rem;
+
+    color: var(--slidev-theme-primary);
+    text-transform: none;
+    opacity: 1 !important;
+  }
+
+  h4, h5, h6 {
+    font-family: Inter;
+    margin-bottom: 0.5rem;
+  }
+
+  blockquote p,
+  blockquote ol li {
+    font-family: DroidSerifItalic;
+  }
+
+  p,
+  li {
+    font-family: Inter;
+  }
+
+  ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    content: "\25A0";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--slidev-theme-primary); /* Change the color */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    font-size: 0.9rem;
+    width: 1.5rem; 
+    margin-left: -1.5rem; 
+    vertical-align: top;
+  }
+
+  blockquote {
+    font-family: DroidSerifItalic;
+    padding-top: 0.5rem;
+  }
+
+  blockquote > p {
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.slidev-layout.footer {
+  font-family: InterSemibold;
+}
+
+.slidev-layout.cover {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-6xl pl-0 mb-7;
+    background-image: none;
+    color: black;
+  }
+
+  h4, h5, h6 {
+    color: var(--slidev-theme-primary);
+  }
+
+}
