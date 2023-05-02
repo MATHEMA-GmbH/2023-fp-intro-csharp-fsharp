@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@iconify-json/emojione": "^1.1.2",
+    "@iconify-json/logos": "^1.1.25",
     "@iconify-json/mdi": "^1.1.33",
     "@iconify-json/noto": "^1.1.5",
     "@iconify-json/openmoji": "^1.1.11",

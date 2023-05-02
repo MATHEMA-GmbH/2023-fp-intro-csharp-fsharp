@@ -2,26 +2,19 @@
 
 Funktionale Programmierung wird oft als das "Zusammenstöpseln" von Funktionen dargestellt...
 
-----
+---
 
 Beispiel:
 
-```
+```txt
 f1: Eingabe string, Ausgabe int
+f1: string -> int // FP Syntax
+
 f2: Eingabe int, Ausgabe bool
-
-FP: Komposition von f1 und f2
-f3: Eingabe string, Ausgabe bool
+f2: int -> bool // FP Syntax
 ```
 
-```
-// FP Syntax
-f1: string -> int
-f2: int -> bool
-f3: string -> bool
-```
-
-----
+---
 
 ```csharp
 // Klassisch ===========================================================
@@ -50,15 +43,15 @@ static bool F2(this int i) => i > 0;
 bool F3(string s) => s.F1().F2();
 ```
 
-----
+---
 
 Problem: Keine standardisierte Strategie für Fehlerbehandlung 
 
-----
+---
 
 - Wenn wir davon ausgehen, dass Funktionen auch einen Fehlerfall haben, benötigen wir einen **neuen Datentyp**, der das abbilden kann
 
-----
+---
 
 #### Result/Either
 
@@ -66,38 +59,42 @@ Problem: Keine standardisierte Strategie für Fehlerbehandlung
   - das Ergebnis beinhalten, oder 
   - einen Fehlerfall
 
-----
+---
 
 - In Railway-Sprech bedeutet dass, dass man "zweigleisig" fährt:
-
 - Jede **Funktion** bekommt eine Eingabe, und 
   - hat "im Bauch" eine Weiche, die entscheidet ob 
     - auf das Fehlergleis oder 
     - auf das Erfolgsgleis umgeschaltet wird.
-
 - Die Wrapperklasse mit der **Funktion** ist das Entscheidende!
 
-----
+---
 
 - In anderen Worten: die Funktionen haben aktuell 1 Eingabe (1 Gleis), und 2 Ausgaben (2 Gleise)
 
-![img](./resources/rop-tracks-Page-2.png)
+<img
+  class="absolute bottom-50 left-10 w-200"
+  src="/images/rop-tracks-Page-2.png"
+/>
 
-----
+
+---
 
 - Man benötigt also einen Mechanismus, der eine 2-gleisige Ausgabe so umwandelt, dass eine Funktion, die eine 1-gleisige Eingabe erwartet, damit umgehen kann
 
-![img](./resources/rop-tracks-Page-4.png)
+<img
+  class="absolute bottom-10 left-20 w-180"
+  src="/images/rop-tracks-Page-4.png"
+/>
 
-----
+---
 
 #### Was muss dieser Mechanismus können?
 
 - wenn die Eingabe fehlerhaft ist, muss die Funktion nichts tun, und kann den Fehler weiterreichen
 - wenn die Eingabe nicht fehlerhaft ist, wird der Wert an die Funktion gegeben
 
-----
-
+---
 
 ```haskell
 bind: (string -> Result int) -> Result string -> Result int
@@ -107,11 +104,10 @@ bind: (a -> M b) -> M a -> M b
 
 - FP-Jargon: eine Wrapper-Klasse, die `bind` bereitstellt, wird **Monade** genannt (sehr stark vereinfacht!).
 
-Note:
+TODO:
 Beispiel: siehe `ChainingOptions.Chaining_option_returning_functions`.
 
-
-----
+---
 
 - `Either` besteht aus zwei Teilen
   - `Left`
@@ -120,10 +116,10 @@ Beispiel: siehe `ChainingOptions.Chaining_option_returning_functions`.
   - `Failure`
   - `Success`
 
-----
+---
 
 ```csharp
-Option&lt;string&gt; IsValidOpt(string s) =>
+Option<string> IsValidOpt(string s) =>
     string.IsNullOrEmpty(s)
         ? None
         : Some(s);
@@ -134,9 +130,8 @@ Option&lt;string&gt; IsValidOpt(string s) =>
 - `None` wird durch `Failure`/`Left` ersetzt (frei wählbar, z.B. selbst definierter Error Typ).
 
 ```csharp
-Either&lt;string, string&gt; IsValidEither(string s)
+Either<string, string> IsValidEither(string s)
     => string.IsNullOrEmpty(s)
-        ? (Either&lt;string, string&gt;) Left("ups")
+        ? (Either<string, string>) Left("ups")
         : Right(s);
 ```
-

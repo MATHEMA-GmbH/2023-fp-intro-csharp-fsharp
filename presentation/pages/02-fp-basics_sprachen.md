@@ -1,13 +1,18 @@
-<!-- .slide: data-background="images/fp-languages-overview.png" data-background-size="contain" -->
-
-Note:
-csharp und java haben beide mehr FP features. Man kann aber immer RotzCode in den Sprachen schreiben.
-Sprachen, die einem es schwermachen, RotzCode zu schreiben, sind besser (Stichwort: Goto considered harmful).
-
+---
+layout: two-cols
 ---
 
-Schränken uns diese FP Paradigmen ein?
+<img
+  class="absolute top-0 right-10 w-150"
+  src="/images/fp-languages-overview.png"
+/>
 
----
+::right::
 
-Wie kann man mit diesem "Purismus" Software schreiben, die etwas tut?
+- Schränken uns diese FP Paradigmen ein?
+- Wie kann man mit diesem "Purismus" Software schreiben, die etwas tut?
+
+TODOs
+
+- TODO add image source
+- TODO add bullet points from other presentation

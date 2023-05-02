@@ -1,5 +1,5 @@
-
 ### Problem: Verkettung eingepackter Werte
+
 ```fsharp
 let storeInDatabase path content = 
   try
@@ -11,7 +11,7 @@ let storeInDatabase path content =
 let stringToOption s =
     if String.IsNullOrWhiteSpace s then None else Some s
 
-let toUpper (s : string) = s.ToUpper()
+let toUpper (s: string) = s.ToUpper()
 
 let nonEmptyStringStoreInPersistenceAndToUpper path content =
     let nonEmpty = stringToOption content
@@ -26,21 +26,24 @@ let nonEmptyStringStoreInPersistenceAndToUpper path content =
 
 ### Monade ("Chainable")
 
-![img](./resources/Monade_1.png)
+![img](/images/Monade_1.png)
 
 ----
 
 ### Monade ("Chainable")
+
 - Container mit "bind" Funktion (die bestimmten Regeln folgt): "Chainable"
 - Bezeichnung in der FP-Welt: **Monade**
-- ```fsharp
+
+```fsharp
   bind: (a -> M b) -> M a -> M b
 ```
-- Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), >>=
+- Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), &gt;&gt;=
 
-----
+---
 
 ## Verkettung
+
 ```fsharp
 let storeInDatabase path content = 
   try
@@ -52,11 +55,10 @@ let storeInDatabase path content =
 let stringToOption s =
     if String.IsNullOrWhiteSpace s then None else Some s
 
-let toUpper (s : string) = s.ToUpper()
+let toUpper (s: string) = s.ToUpper()
 
 let nonEmptyStringStoreInPersistenceAndToUpper path content =
     let nonEmpty = stringToOption content
     let stored = Option.bind (storeInDatabase path) nonEmpty
     let nonEmptyUpper = Option.map toUpper stored
 ```
-

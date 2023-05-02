@@ -19,14 +19,16 @@ let addTwoNumbers a b =
   let sum = Option.map2 add positiveA positiveB
 
   // aber was, wenn man mehr Parameter hat?
-
 ```
 
 ---
 
 ### Applicative
 
-![img](./resources/Applicative_1_small.png)
+<img
+  class="absolute bottom-10 right-10 w-150"
+  src="/images/Applicative_1_small.png"
+/>
 
 ---
 
@@ -39,7 +41,7 @@ let addTwoNumbers a b =
   apply: AF (a -> b) -> AF a -> AF b
 ```
 
-- Andere Bezeichnungen für "apply": ap, <*>
+- Andere Bezeichnungen für "apply": ap, &lt;*&gt;
 
 ---
 
@@ -66,20 +68,20 @@ let addNumbers a b c =
     let (sum''' : (int) option) = Option.apply sum'' positiveC
 ```
 
-----
+---
 
 ### Funktion mit mehreren Parametern
 
 ```csharp
 // C#
-Func&lt;int, int, int, int&gt; sum = (a, b, c) => a + b + c;
+Func<int, int, int, int> sum = (a, b, c) => a + b + c;
 
-Func&lt;int, Validation&lt;int&gt;&gt; onlyPositive = i
+Func<int, Validation<int>> onlyPositive = i
     => i > 0
         ? Valid(i)
         : Error($"Number {i} is not positive.");
 
-Validation&lt;int&gt; AddNumbers(int a, int b, int c) {
+Validation<int> AddNumbers(int a, int b, int c) {
     return Valid(sum)              // returns int -> int -> int -> int
         .Apply(onlyPositive(a))    // returns int -> int -> int
         .Apply(onlyPositive(b))    // returns int -> int

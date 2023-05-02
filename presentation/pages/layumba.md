@@ -1,7 +1,6 @@
-
 ### LaYumba
 
-![img](./images/book-csharp-fp-with-comment.png) <!-- .element: class="borderless" -->
+![img](/images/book-csharp-fp-with-comment.png)
 
 - NuGet Paket
 - kann nicht alles
@@ -10,24 +9,36 @@
 
 ----
 
-![img](./images/language-ext-screenshot-github-0.png) <!-- .element: class="borderless" -->
+### language-ext
+
+![img](/images/language-ext-screenshot-github-0.png)
 
 ----
 
-![img](./images/language-ext-screenshot-github-1.png) <!-- .element: class="borderless" -->
+### language-ext
+
+![img](/images/language-ext-screenshot-github-1.png)
 
 ----
 
-![img](./images/language-ext-screenshot-github-2.png) <!-- .element: class="borderless" -->
+### language-ext
+
+![img](/images/language-ext-screenshot-github-2.png)
 
 ----
 
-![img](./images/language-ext-screenshot-github-3.png) <!-- .element: class="borderless" -->
+### language-ext
+
+![img](/images/language-ext-screenshot-github-3.png)
 
 ----
 
-![img](./images/language-ext-screenshot-github-4.png) <!-- .element: class="borderless" -->
+### language-ext
+
+![img](/images/language-ext-screenshot-github-4.png)
 
 ----
 
-![img](./images/language-ext-screenshot-github-5.png) <!-- .element: class="borderless" -->
+### language-ext
+
+![img](/images/language-ext-screenshot-github-5.png)

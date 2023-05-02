@@ -11,7 +11,7 @@
 // F#
 module X
 
-let toUpper (s : string) = s.ToUpper()
+let toUpper (s: string) = s.ToUpper()
 
 let stringToOption s =
     if String.IsNullOrWhiteSpace s then
@@ -36,7 +36,7 @@ static class X
 {
   string ToUpper(string s) => s.ToUpper();
 
-  Option&lt;string&gt; StringToOption(string s)
+  Option<string> StringToOption(string s)
     => string.IsNullOrEmpty(s) ? None : Some(s)
 
   NonEmptyStringToUpper(string s)
@@ -51,24 +51,27 @@ static class X
 ----
 
 ### Funktor ("Mappable")
-![img](./resources/Funktor_1.png)
+
+![img](/images/Funktor_1.png)
 
 ----
 
 ### Funktor ("Mappable")
+
 - Container mit "map" Funktion (die bestimmten Regeln folgt): "Mappable"
 - Bezeichnung in der FP-Welt: **Funktor**
-- 
+
 ```fsharp
   map: (a -> b) -> F a -> F b
 ```
-- Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), <$>, <!>
+- Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), &lt;$&gt;, &lt;!&gt;
 
 ----
 
 ### Wert in Container, Funktion passt nicht
+
 ```fsharp
-let toUpper (s : string) = s.ToUpper()
+let toUpper (s: string) = s.ToUpper()
 
 let stringToOption s =
     if String.IsNullOrWhiteSpace s then

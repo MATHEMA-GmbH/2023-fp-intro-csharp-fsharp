@@ -1,63 +1,100 @@
 ## F# in bestehendes Projekt integrieren
 
-### Scripting zur Automation
-
-- statisch typisierte Skripte
-- .fsx Files
-- kann C# mittlerweile auch
-
-----
+---
 
 ### Tests
 
-- FsUnit für lesbarere Tests
-<img src="./resources/FsUnit.png" alt="FsUnit" style="" />
+- [FsUnit](https://github.com/fsprojects/FsUnit) für lesbarere Tests
 
-----
+<img
+  class="absolute top-35 left-20 w-200"
+  src="/images/FsUnit.png"
+/>
 
-- FsCheck für Property Based Testing
-<img src="./resources/FsCheck.png" alt="FsCheck" style="" />
+---
 
-----
+### Tests
 
-- Unquote für besseren "Callstack" bei fehlschlagenden Tests
-<img src="./resources/Unquote.png" alt="Unquote" style="" />
+- [FsCheck](https://fscheck.github.io/FsCheck/) für Property Based Testing
 
-----
+<img
+  class="absolute top-35 left-20 w-200"
+  src="/images/FsCheck.png"
+/>
 
-- Browser-Fernsteuerung mit canopy
-  <img src="./resources/canopy.png" alt="canopy" style="" />
+---
 
-----
+### Tests
+
+- [Unquote](https://github.com/SwensenSoftware/unquote) für besseren "Callstack" bei fehlschlagenden Tests
+
+<img
+  class="absolute top-35 left-20 w-200"
+  src="/images/Unquote.png"
+/>
+
+---
 
 ### Builds
 
-- FAKE als erweiterbare DSL für Build-Tasks
-  <img src="./resources/FAKE.png" alt="FAKE" style="" />
-  
-----
+- [FAKE](https://fake.build/) als erweiterbare DSL für Build-Tasks
 
-- Paket als Alternative zu Nuget
-  <img src="./resources/Paket.png" alt="Paket" style="" />
+<img
+  class="absolute top-35 left-20 w-200"
+  src="/images/FAKE.png"
+/>
 
-----
+---
 
-- Farmer: Making repeatable Azure deployments easy!
-  <img src="./resources/Farmer.png" alt="Farmer" style="" />
+### Builds
 
-----
+- [Paket](https://github.com/fsprojects/Paket) als Alternative zu Nuget
 
-## Weitere Nutzungsmöglichkeiten
+<img
+  class="absolute top-35 left-20 w-200"
+  src="/images/Paket.png"
+/>
 
-- Webseiten mit Fable
-  <img src="./resources/Fable.png" alt="Fable" style="" />
+---
 
-----
+### Builds
 
-- Mobile Apps mit Fabulous (Xamarin)
-  <img src="./resources/Fabulous.png" alt="Fabulous" style="" />
+- [Farmer](https://compositionalit.github.io/farmer/): Making repeatable Azure deployments easy!
 
-----
+<img
+  class="absolute top-35 left-20 w-120"
+  src="/images/Farmer.png"
+/>
+
+---
+
+## Web
+
+- Webseiten mit [Fable](https://fable.io/)
+
+<img
+  class="absolute top-45 left-40 w-130"
+  src="/images/Fable.png"
+/>
+
+---
+
+## Web
+
+- Mobile Apps mit [Fabulous](https://fabulous.dev/) (Xamarin)
+
+<img
+  class="absolute top-45 left-20 w-150"
+  src="/images/Fabulous.png"
+/>
+
+---
+
+## Web
 
 - Full-Stack-Webanwendungen mit dem SAFE-Stack
-  <img src="./resources/SAFE.png" alt="SAFE" style="" />
+
+<img
+  class="absolute top-45 left-20 w-180"
+  src="/images/SAFE.png"
+/>

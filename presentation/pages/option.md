@@ -6,7 +6,7 @@
 
 ```csharp
 // Enthält die Signatur die ganze Wahrheit?
-public string Stringify&lt;T&gt;(T data)
+public string Stringify<T>(T data)
 {
     return null;
 }
@@ -52,7 +52,7 @@ public class Do
 ## Option
 
 ```fsharp
-type Option&lt;'T&gt; = Some&lt;'T&gt; | None
+type Option<'T> = Some<'T> | None
 ```
 
 - entweder ein Wert ist da - dann ist er in "Some" eingepackt
@@ -64,7 +64,7 @@ type Option&lt;'T&gt; = Some&lt;'T&gt; | None
 ## Mit Option
 
 ```csharp
-public Option&lt;int&gt; IntifyOption(string s)
+public Option<int> IntifyOption(string s)
 {
     int result = -1;
     bool success = int.TryParse(s, out result);
@@ -78,15 +78,15 @@ public Option&lt;int&gt; IntifyOption(string s)
 
 > Pattern matching allows you to match a value against some patterns to select a branch of the code.
 
-<pre><code data-noescape data-trim class="lang-csharp hljs">
-public string Stringify&lt;T&gt;(<span class="highlightcode">Option&lt;T&gt;</span> data)
+```csharp
+public string Stringify<T>(Option<T> data)
 {
     return data.Match(
-        <span class="highlightcode">None:</span> () => "",
-        <span class="highlightcode">Some:</span> (existingData) => existingData.ToString()
+        None: () => "",
+        Some: (existingData) => existingData.ToString()
     );
 }
-</code></pre>
+```
 
 ----
 

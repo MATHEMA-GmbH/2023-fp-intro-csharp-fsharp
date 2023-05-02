@@ -1,6 +1,6 @@
 # Einführung in F# #
 
-![img](./images/fsharp256.png) <!-- .element: class="borderless" -->
+![img](/images/fsharp256.png)
 
 ----
 
@@ -12,6 +12,11 @@
 - Multi-Paradigma
 - Fokus auf funktionale Programmierung
 
+<img
+  class="absolute top-10 right-10 w-100"
+  src="/images/fsharp256.png"
+/>
+
 ----
 
 ## F# #
@@ -19,7 +24,12 @@
 - erzwingt keine puren Funktionen, sondern erlaubt Seiteneffekte
 - Statisch typisiert
 - integriert ins .NET Ökosystem
-- C# / VB.net Interop
+- C# / VB.NET Interop
+
+<img
+  class="absolute top-10 right-10 w-100"
+  src="/images/fsharp256.png"
+/>
 
 ----
 
@@ -28,6 +38,11 @@
 - Significant whitespace
 - Reihenfolge der Definitionen in Datei wichtig
 - Reihenfolge der Dateien im Projekt wichtig
+
+<img
+  class="absolute top-10 right-10 w-100"
+  src="/images/fsharp256.png"
+/>
 
 ----
 
@@ -122,7 +137,9 @@ let laneText =
 type Shape =
     | Circle of float
     | Rectangle of float * float
+
 let c = Circle 42.42
+
 match c with
 | Circle radius -> radius * radius * System.Math.PI
 | Rectangle(width, height) -> width * height
@@ -153,13 +170,13 @@ let shoppingCart = {
 ## ...Also known as...
 
 - Discriminated Union
-  - OR-Type <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Sum-Type: Der Zustand ergibt sich aus der Summe der Auswahlmöglichkeiten (*) <!-- .element: class="fragment" data-fragment-index="3" -->
+  - OR-Type
+  - Sum-Type: Der Zustand ergibt sich aus der Summe der Auswahlmöglichkeiten (*)
 - Record Type
-  - AND-Type <!-- .element: class="fragment" data-fragment-index="2" -->
-  - Product-Type: Der Zustand ergibt sich aus dem kartesischen Produkt aller Möglichkeiten jedes Feldes (*) <!-- .element: class="fragment" data-fragment-index="3" -->
+  - AND-Type
+  - Product-Type: Der Zustand ergibt sich aus dem kartesischen Produkt aller Möglichkeiten jedes Feldes (*)
 
-(*) Algebraic Data Types <!-- .element: class="fragment" data-fragment-index="3" -->
+(*) Algebraic Data Types
 
 ----
 
@@ -184,7 +201,7 @@ type TruthTable {
 }
 ```
 
-Alle möglichen Zustaende von `TruthTable` sind:
+Alle möglichen Zustände von `TruthTable` sind:
 
 - `true`, `false`
 - `true`, `true`
@@ -201,6 +218,7 @@ Diese Menge nennt man kartesisches **Produkt**.
 - Unmöglich einen ungültigen Record zu erzeugen
 - Structural Equality
 - Hint: C# Value Objects out of the box
+- ✨ seit C# 9: `records`
 
 ----
 
@@ -224,7 +242,7 @@ let equal = (thing1 = thing2) // true
 - dann muss explizit auf eine Eigenschaft verglichen werden (z.B. die Id)
 
 ```fsharp
-[&lt;NoEquality; NoComparison&gt;]
+[<NoEquality; NoComparison>]
 type NonEquatableNonComparable = {
     Id: int
 }

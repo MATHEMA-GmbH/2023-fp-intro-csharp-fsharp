@@ -17,37 +17,28 @@
   - [Railway Oriented Programming](https://fsharpforfunandprofit.com/rop/)
 
 ---
-
-### Kontakt
-
-<div style="position: absolute; top: 100px; left: -150px; height: 500px; font-size: 1.75rem">
-  <h4>Patrick Drechsler</h4>
-  <ul class="small-font" >
-    <li>patrick.drechsler@redheads.de</li>
-    <li>Github: https://github.com/draptik</li>
-    <li>Twitter: @drechsler</li>
-    <li>Blog: https://draptik.github.io</li>
-  </ul>
-</div>
-
-<div style="position: absolute; top: 100px; left: 400px; height: 500px; width:800px; font-size: 1.75rem">
-  <h4>Martin Grotz</h4>
-  <ul class="small-font" >
-    <li>martin.grotz@redheads.de</li>
-    <li>Github: https://github.com/groma84</li>
-    <li>Twitter: @mobilgroma</li>
-    <li>Blog: https://elm.finde-ich-super.de</li>
-  </ul>
-</div>
-
+layout: two-cols
 ---
 
-## Bildquellen
+### Patrick Drechsler
 
-- [road-3478977_1920.jpg](https://pixabay.com/de/straße-landschaft-horizont-gerade-3478977/)
-- [mob-programming-setup.png](TODO: Maaret Pyhäjärvi and Llewellyn Falco; The Mob Programming Guide Book)
-- [wikipedia-value-objects.png](https://en.wikipedia.org/wiki/Value_object) Screenshot 2019-03-30
-- [fp-languages-overview.png](Get Programming with F#, Isaac Abraham, fig. 1, page 4)
+- <mdi-email /> patrick.drechsler@mathema.de
+- <logos-github-icon /> https://github.com/draptik
+- <mdi-web /> Blog: https://draptik.github.io
+- <logos-twitter /> @drechsler
+- <logos-mastodon-icon /> @drechsler@floss.social
+- <logos-linkedin-icon /> https://www.linkedin.com/in/patrick-drechsler-985a2911/
+
+Slides: TODO & QR-Code
+
+::right::
+
+### Martin Grotz
+
+- <mdi-email /> martin.grotz@mathema.de
+- <logos-github-icon /> https://github.com/groma84
+- <mdi-web /> Blog: https://elm.finde-ich-super.de
+- <logos-twitter /> @mobilgroma
 
 ---
 
