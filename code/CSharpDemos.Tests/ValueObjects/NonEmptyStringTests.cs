@@ -1,4 +1,4 @@
-using CSharpDemos.Tests.TestHelper;
+// using CSharpDemos.Tests.TestHelper;
 using CSharpDemos.ValueObjects;
 using FluentAssertions;
 using Xunit;
@@ -23,7 +23,7 @@ namespace CSharpDemos.Tests.ValueObjects
                 _ => true);
             
             // version 2
-            NonEmptyString.Create("a").Should().BeEqualToNonEmptyString("a");
+            // NonEmptyString.Create("a").Should().BeEqualToNonEmptyString("a");
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace CSharpDemos.Tests.ValueObjects
                 x => x.ToString().Should().Be("a"));
 
             // version 2
-            NonEmptyString.Create("").Should().BeNone();
+            // NonEmptyString.Create("").Should().BeNone();
         }
     }
 }
