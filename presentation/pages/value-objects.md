@@ -41,7 +41,7 @@ class Kunde {
 
 ----
 
-![img](images/wikipedia-value-objects.png)
+![img](/images/wikipedia-value-objects.png)
 
 ----
 
