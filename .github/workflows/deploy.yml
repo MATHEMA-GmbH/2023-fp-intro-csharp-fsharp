@@ -1,0 +1,47 @@
+name: Deploy pages
+on:
+  push:
+    branches:
+      - magdeburger-devdays
+
+jobs:
+  deploy:
+
+    env:
+      PRESENTATION_FOLDER: 'presentation'
+      TARGET_REPO_NAME: '2023-05-magdeburger-devdays-fp-csharp-to-fsharp'
+      TARGET_GITHUB_OWNER: 'draptik'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+            cd ${{ env.PRESENTATION_FOLDER }}
+            npm install
+
+      - name: Install slidev
+        run:  |
+            cd ${{ env.PRESENTATION_FOLDER }}
+            npm i -g @slidev/cli
+
+      # Ensure to set the base directory to the current branch name
+      - name: Build
+        run: |
+            cd ${{ env.PRESENTATION_FOLDER }}
+            slidev build --base '/${{ env.TARGET_REPO_NAME }}'
+
+      - name: Deploy to target repository
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          single-commit: true
+          folder: ${{ env.PRESENTATION_FOLDER }}/dist # The folder the action should deploy
+          repository-name: '${{ env.TARGET_GITHUB_OWNER }}/${{ env.TARGET_REPO_NAME }}'
+          token: ${{ secrets.SLIDEV_TOKEN }}
