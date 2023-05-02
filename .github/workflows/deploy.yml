@@ -10,7 +10,7 @@ jobs:
     env:
       PRESENTATION_FOLDER: 'presentation'
       TARGET_REPO_NAME: '2023-05-magdeburger-devdays-fp-csharp-to-fsharp'
-      TARGET_GITHUB_OWNER: 'draptik'
+      TARGET_GITHUB_OWNER: 'MATHEMA-GmbH'
 
     runs-on: ubuntu-latest
 
