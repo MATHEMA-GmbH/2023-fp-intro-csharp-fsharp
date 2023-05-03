@@ -16,6 +16,12 @@ jobs:
 
     steps:
 
+      - name: debugging
+        run: |
+            x=${{ secrets.MATHEMA_GH_TOKEN }}
+            n=${#x}
+            echo "Length of token is: $n"
+
       - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
