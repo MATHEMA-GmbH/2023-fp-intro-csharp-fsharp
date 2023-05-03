@@ -44,4 +44,4 @@ jobs:
           single-commit: true
           folder: ${{ env.PRESENTATION_FOLDER }}/dist # The folder the action should deploy
           repository-name: '${{ env.TARGET_GITHUB_OWNER }}/${{ env.TARGET_REPO_NAME }}'
-          token: ${{ secrets.SLIDEV_TOKEN }}
+          token: ${{ secrets.MATHEMA_GH_TOKEN }}
