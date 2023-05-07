@@ -1,18 +1,18 @@
+using LaYumba.Functional;
 using System;
 using System.Collections.Generic;
-using LaYumba.Functional;
 
 namespace CSharpDemos.ValueObjects
 {
-    public class Id : ValueObject
+    public class IdVO : ValueObject
     {
         // smart ctor
-        public static Func<int, Option<Id>> Create
+        public static readonly Func<int, Option<IdVO>> Create
             = i => i.IsValidId()
-                ? F.Some(new Id(i))
+                ? F.Some(new IdVO(i))
                 : F.None;
 
-        private Id(int value)
+        private IdVO(int value)
         {
             Value = value;
         }
@@ -24,7 +24,7 @@ namespace CSharpDemos.ValueObjects
             yield return Value;
         }
 
-        public static implicit operator int(Id id)
+        public static implicit operator int(IdVO id)
         {
             return id.Value;
         }

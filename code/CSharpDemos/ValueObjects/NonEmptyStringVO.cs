@@ -1,18 +1,18 @@
+using LaYumba.Functional;
 using System;
 using System.Collections.Generic;
-using LaYumba.Functional;
 
 namespace CSharpDemos.ValueObjects
 {
-    public class NonEmptyString : ValueObject
+    public class NonEmptyStringVO : ValueObject
     {
         // smart ctor
-        public static Func<string, Option<NonEmptyString>> Create
+        public static Func<string, Option<NonEmptyStringVO>> Create
             = s => s.IsNonEmpty()
-                ? F.Some(new NonEmptyString(s))
+                ? F.Some(new NonEmptyStringVO(s))
                 : F.None;
 
-        private NonEmptyString(string potentialString)
+        private NonEmptyStringVO(string potentialString)
         {
             Value = potentialString;
         }
@@ -24,7 +24,7 @@ namespace CSharpDemos.ValueObjects
             yield return Value;
         }
 
-        public static implicit operator string(NonEmptyString nonEmptyString)
+        public static implicit operator string(NonEmptyStringVO nonEmptyString)
         {
             return nonEmptyString.Value;
         }

@@ -1,9 +1,7 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using LaYumba.Functional;
+using System;
 using Xunit;
-using Unit = System.ValueTuple; // <- don't use void!!
-
 using static LaYumba.Functional.F; // <- !!
 
 namespace LaYumbaDemo.Tests
@@ -16,7 +14,7 @@ namespace LaYumbaDemo.Tests
         public void Creating_option_with_value_works()
         {
             var s = Some("hello");
-            
+
             s.Match(
                 None: () => true.Should().BeFalse(),
                 Some: x => x.Should().Be("hello"));
@@ -47,7 +45,7 @@ namespace LaYumbaDemo.Tests
         // smart ctor
         public static Option<Age> Of(int age)
         {
-            return IsValid(age) ? Some(new Age(age)) : F.None;
+            return IsValid(age) ? Some(new Age(age)) : None;
         }
 
         private Age(int value)
@@ -59,7 +57,7 @@ namespace LaYumbaDemo.Tests
 
         private static bool IsValid(int age)
         {
-            return 0 <= age && age < 120;
+            return age is >= 0 and < 120;
         }
     }
 }

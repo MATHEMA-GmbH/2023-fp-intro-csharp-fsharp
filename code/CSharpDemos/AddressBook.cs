@@ -15,31 +15,31 @@ namespace CSharpDemos
         public override string ToString() => $"AddressBook. Number of entries: {Contacts.Count}";
     }
 
-    //    public static class AddressBookExtensions
-    //    {
-    ////        private static bool HasContact(this ImmutableList<Contact> contacts, Contact contact) 
-    ////            => contacts.Any(x => x.Id == contact.Id);
-    ////
-    ////        private static bool HasContact(this AddressBook addressBook, Contact contact) 
-    ////            => addressBook.Contacts.HasContact(contact);
-    ////
-    ////        private static AddressBook AddContact(this AddressBook addressBook, Contact contact) 
-    ////            => new AddressBook(addressBook.Contacts.Add(contact));
-    ////
-    ////        private static AddressBook UpdateContact(this AddressBook addressBook, Contact contact)
-    ////        {
-    ////            var contactToReplace = addressBook.Contacts.Single(x => x.Id == contact.Id);
-    ////            return new AddressBook(addressBook.Contacts.Replace(contactToReplace, contact));
-    ////        }
-    //        
-    ////        public static AddressBook AddOrUpdateContact(this AddressBook addressBook, Contact contact) 
-    ////            => addressBook.HasContact(contact) 
-    ////                ? addressBook.UpdateContact(contact) 
-    ////                : addressBook.AddContact(contact);
-    //
-    ////        public static AddressBook RemoveContact(this AddressBook addressBook, Contact contact) 
-    ////            => new AddressBook(addressBook.Contacts.Remove(contact));
-    //    }
+    public static class AddressBookExtensions
+    {
+        private static bool HasContact(this ImmutableList<Contact> contacts, Contact contact)
+            => contacts.Any(x => x.Id == contact.Id);
+
+        private static bool HasContact(this AddressBook addressBook, Contact contact)
+            => addressBook.Contacts.HasContact(contact);
+
+        private static AddressBook AddContact(this AddressBook addressBook, Contact contact)
+            => new AddressBook(addressBook.Contacts.Add(contact));
+
+        private static AddressBook UpdateContact(this AddressBook addressBook, Contact contact)
+        {
+            var contactToReplace = addressBook.Contacts.Single(x => x.Id == contact.Id);
+            return new AddressBook(addressBook.Contacts.Replace(contactToReplace, contact));
+        }
+
+        public static AddressBook AddOrUpdateContact(this AddressBook addressBook, Contact contact)
+            => addressBook.HasContact(contact)
+                ? addressBook.UpdateContact(contact)
+                : addressBook.AddContact(contact);
+
+        public static AddressBook RemoveContact(this AddressBook addressBook, Contact contact)
+            => new AddressBook(addressBook.Contacts.Remove(contact));
+    }
 
     public static class AddressBookFunctionalExtensions
     {

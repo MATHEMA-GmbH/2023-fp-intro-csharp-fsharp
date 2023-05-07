@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace CSharpDemos.ValueObjects
 {
-    public class DateOfBirth : ValueObject
+    public class DateOfBirthVO : ValueObject
     {
-        public DateOfBirth(DateTime value)
+        public DateOfBirthVO(DateTime value)
         {
             Value = value.Date;
         }
@@ -17,7 +17,7 @@ namespace CSharpDemos.ValueObjects
             yield return Value;
         }
 
-        public static implicit operator DateTime(DateOfBirth dob)
+        public static implicit operator DateTime(DateOfBirthVO dob)
         {
             return dob.Value;
         }

@@ -1,10 +1,10 @@
+using FluentAssertions;
+using LaYumba.Functional;
 using System;
 using System.Collections.Immutable;
-using CSharpDemos.Tests.TestHelper;
-using LaYumba.Functional;
 using Xunit;
-using static LaYumba.Functional.F;
 using static CSharpDemos.Tests.TestHelper.ContactHelper;
+using static LaYumba.Functional.F;
 
 namespace CSharpDemos.Tests
 {
@@ -23,7 +23,7 @@ namespace CSharpDemos.Tests
             var result = emptyAddressBook.AddWorkflow(sendMailFunction, homer);
 
             // Assert
-            // result.Should().HaveNoErrors();
+            result.ToString().Should().Be("Right(AddressBook. Number of entries: 1)");
         }
 
         [Fact]
@@ -39,7 +39,7 @@ namespace CSharpDemos.Tests
             var result = emptyAddressBook.AddWorkflow(sendMailFunction, homer);
 
             // Assert
-            // result.Should().HaveErrorMessage("ups");
+            result.ToString().Should().Be("Left(ups)");
         }
     }
 }

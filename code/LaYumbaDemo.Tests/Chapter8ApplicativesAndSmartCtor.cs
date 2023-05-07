@@ -1,10 +1,9 @@
-using System;
-using System.Collections.Generic;
 using FluentAssertions;
 using LaYumba.Functional;
+using System;
+using System.Collections.Generic;
 using Xunit;
 using static LaYumba.Functional.F;
-using Enum = LaYumba.Functional.Enum;
 
 namespace LaYumbaDemo.Tests
 {
@@ -15,42 +14,42 @@ namespace LaYumbaDemo.Tests
 
     public class PhoneNumberValidationTests
     {
-        ISet<string> ValidCountryCodes = new HashSet<string> { "ch", "uk", "de" };
+        readonly ISet<string> _validCountryCodes = new HashSet<string> { "ch", "uk", "de" };
 
         // string -> Validation<CountryCode>
-        Func<string, Validation<CountryCode>> validCountryCode
-           => s => CountryCode.Create(ValidCountryCodes, s).Match(
+        Func<string, Validation<CountryCode>> ValidCountryCode
+           => s => CountryCode.Create(_validCountryCodes, s).Match(
               None: () => Error($"{s} is not a valid country code"),
               Some: c => Valid(c));
 
         // string -> Validation<PhoneNumber.NumberType>
-        Func<string, Validation<PhoneNumber.NumberType>> validNumberType
-           = s => Enum.Parse<PhoneNumber.NumberType>(s).Match(
+        readonly Func<string, Validation<PhoneNumber.NumberType>> _validNumberType
+           = s => s.Parse<PhoneNumber.NumberType>().Match(
               None: () => Error($"{s} is not a valid number type"),
               Some: n => Valid(n));
 
         // string -> Validation<PhoneNumber.Number>
-        Func<string, Validation<Number>> validNumber
+        readonly Func<string, Validation<Number>> _validNumber
            = s => Number.Create(s).Match(
               None: () => Error($"{s} is not a valid number"),
               Some: n => Valid(n));
 
         Validation<PhoneNumber> CreateValidPhoneNumber(string type, string countryCode, string number)
             => Valid(PhoneNumber.Create)
-                .Apply(validNumberType(type))
-                .Apply(validCountryCode(countryCode))
-                .Apply(validNumber(number));
+                .Apply(_validNumberType(type))
+                .Apply(ValidCountryCode(countryCode))
+                .Apply(_validNumber(number));
 
-        //Validation<PhoneNumber> CreateValidPhoneNumber2(string type, string countryCode, string number)
-        //{
-        //    Validation<Func<PhoneNumber.NumberType, CountryCode, Number, PhoneNumber>> validation = Valid(PhoneNumber.Create);
+        Validation<PhoneNumber> CreateValidPhoneNumber2(string type, string countryCode, string number)
+        {
+            Validation<Func<PhoneNumber.NumberType, CountryCode, Number, PhoneNumber>> validation = Valid(PhoneNumber.Create);
 
-        //    Validation<PhoneNumber.NumberType> numberType = validNumberType(type);
-        //    return validation.Ap
-        //        .Apply(numberType)
-        //        .Apply(validCountryCode(countryCode))
-        //        .Apply(validNumber(number));
-        //}
+            Validation<PhoneNumber.NumberType> numberType = _validNumberType(type);
+            return validation
+                .Apply(numberType)
+                .Apply(ValidCountryCode(countryCode))
+                .Apply(_validNumber(number));
+        }
 
         [Theory]
         [InlineData("Mobile", "ch", "123456", "Valid(Mobile: (ch) 123456)")]
@@ -70,8 +69,8 @@ namespace LaYumbaDemo.Tests
         public Number Nr { get; }
 
         // smart ctor: Returns a function (!!) which returns a PhoneNumber
-        public static Func<NumberType, CountryCode, Number, PhoneNumber> Create 
-            = (type, country, number) => new PhoneNumber(type, country, number);
+        public static Func<NumberType, CountryCode, Number, PhoneNumber> Create
+            = (type, country, number) => new(type, country, number);
 
         private PhoneNumber(NumberType type, CountryCode country, Number number)
         {
@@ -115,7 +114,7 @@ namespace LaYumbaDemo.Tests
         private Number(string value) { Value = value; }
 
         public static implicit operator string(Number c) => c.Value;
-        public static implicit operator Number(string s) => new Number(s);
+        public static implicit operator Number(string s) => new(s);
 
         public override string ToString() => Value;
     }

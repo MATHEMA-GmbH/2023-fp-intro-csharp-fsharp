@@ -1,8 +1,7 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using LaYumba.Functional;
+using System;
 using Xunit;
-
 using static LaYumba.Functional.F; // <- !!
 
 namespace LaYumbaDemo.Tests
@@ -44,7 +43,7 @@ namespace LaYumbaDemo.Tests
             Func<Candidate, Option<Candidate>> techTest,
             Func<Candidate, Option<Candidate>> interview)
         {
-            return F.Some(candidate)
+            return Some(candidate)
                 .Where(isEligible)
                 .Bind(techTest) // <- TODO Explain Bind
                 .Bind(interview);
@@ -57,7 +56,7 @@ namespace LaYumbaDemo.Tests
             Func<Candidate, Either<Rejection, Candidate>> techTest,
             Func<Candidate, Either<Rejection, Candidate>> interview)
         {
-            return F.Right(candidate)
+            return Right(candidate)
                 .Bind(checkEligibility) // <- TODO explain Bind
                 .Bind(techTest) // <- TODO explain Bind
                 .Bind(interview);
@@ -164,12 +163,12 @@ namespace LaYumbaDemo.Tests
         public void RecruitmentProcess1Test()
         {
             // Arrange
-            Func<Candidate, bool> isEligible = candidate => true;
-            Func<Candidate, Option<Candidate>> techTest = candidate => F.Some(candidate);
-            Func<Candidate, Option<Candidate>> interview = candidate => F.Some(candidate);
+            bool IsEligible(Candidate candidate) => true;
+            Option<Candidate> TechTest(Candidate candidate) => Some(candidate);
+            Option<Candidate> Interview(Candidate candidate) => Some(candidate);
 
             // Act
-            var optionalCandidate = RecruitmentProcess1(new Candidate("homer"), isEligible, techTest, interview);
+            var optionalCandidate = RecruitmentProcess1(new("homer"), IsEligible, TechTest, Interview);
 
             // Assert
             optionalCandidate.Map(c => c.Name.Should().Be("homer"));
@@ -179,20 +178,20 @@ namespace LaYumbaDemo.Tests
         public void RecruitmentProcess2Test()
         {
             // Arrange
-            Func<Candidate, bool> isEligible = candidate => true;
-            Func<Candidate, Either<Rejection, Candidate>> techTest = candidate => F.Right(candidate);
-            Func<Candidate, Either<Rejection, Candidate>> interview = candidate => F.Right(candidate);
+            bool IsEligible(Candidate _) => true;
+            Either<Rejection, Candidate> TechTest(Candidate candidate) => Right(candidate);
+            Either<Rejection, Candidate> Interview(Candidate candidate) => Right(candidate);
 
             Either<Rejection, Candidate> CheckEligibility(Candidate c)
             {
-                if (isEligible(c)) return c;
+                if (IsEligible(c)) return c;
                 return new Rejection("Not eligible");
             }
 
             // Act
             var optionalCandidate = RecruitmentProcess2(
-                new Candidate("homer simpson"),
-                CheckEligibility, techTest, interview);
+                new("homer simpson"),
+                CheckEligibility, TechTest, Interview);
 
             // Assert
             optionalCandidate.Map(candidate => candidate.Name.Should().Be("homer simpson"));
@@ -201,8 +200,8 @@ namespace LaYumbaDemo.Tests
         [Fact]
         public void RenderTest()
         {
-            Render(F.Right(12d)).Should().Be("The result is: 12");
-            Render(F.Left("ups")).Should().Be("Invalid value: ups");
+            Render(Right(12d)).Should().Be("The result is: 12");
+            Render(Left("ups")).Should().Be("Invalid value: ups");
         }
 
         [Fact]
@@ -216,10 +215,10 @@ namespace LaYumbaDemo.Tests
             }
 
             GreetClassic(null).Should().Be("Sorry, who?");
-            GreetClassic("dodnedder").Should().Be("Hello, dodnedder");
+            GreetClassic("Magdeburger Devs").Should().Be("Hello, Magdeburger Devs");
 
 
-            string greet(Option<string> greetee)
+            string Greet(Option<string> greetee)
             {
                 return greetee.Match(
                     () => "Sorry, who?",
@@ -231,11 +230,11 @@ namespace LaYumbaDemo.Tests
             //         () => "Sorry, who?",
             //         (name) => $"Hello, {name}");
 
-            Option<string> none = F.None;
-            var dodnedder = F.Some("dodnedder");
+            Option<string> none = None;
+            var developers = Some("Magdeburger Devs");
 
-            greet(none).Should().Be("Sorry, who?");
-            greet(dodnedder).Should().Be("Hello, dodnedder");
+            Greet(none).Should().Be("Sorry, who?");
+            Greet(developers).Should().Be("Hello, Magdeburger Devs");
         }
 
 

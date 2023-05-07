@@ -16,9 +16,9 @@ namespace CSharpDemos.Tests
         public void Contact_creation(int id, string firstName, string lastName, string expectedMessage, bool isValid)
         {
             // Arrange
-            var optId = Id.Create(id);
-            var optFirstName = NonEmptyString.Create(firstName);
-            var optLastName = NonEmptyString.Create(lastName);
+            var optId = IdVO.Create(id);
+            var optFirstName = NonEmptyStringVO.Create(firstName);
+            var optLastName = NonEmptyStringVO.Create(lastName);
             var optDob = None;
             var optTwitterHandle = None;
             

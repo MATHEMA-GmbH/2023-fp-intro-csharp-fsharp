@@ -1,9 +1,3 @@
-using CSharpDemos.ValueObjects;
-using FluentAssertions;
-using FluentAssertions.Execution;
-using FluentAssertions.Primitives;
-using LaYumba.Functional;
-
 namespace CSharpDemos.Tests.TestHelper
 {
     // public static class NonEmptyStringTestExtensions 
@@ -13,7 +7,7 @@ namespace CSharpDemos.Tests.TestHelper
     //         return new NonEmptyStringAssertions(instance);
     //     }
     // }
-    
+
     // public class NonEmptyStringAssertions
     //     : ReferenceTypeAssertions<Option<NonEmptyString>, NonEmptyStringAssertions>
     // {

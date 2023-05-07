@@ -1,14 +1,14 @@
-using System;
 using CSharpDemos.ValueObjects;
 using LaYumba.Functional;
+using System;
 using static LaYumba.Functional.F;
 
 namespace CSharpDemos
 {
     public class Contact
     {
-        private Contact(Id id, NonEmptyString firstName, NonEmptyString lastName, 
-            Option<DateOfBirth> dateOfBirth, Option<NonEmptyString> twitterHandle)
+        private Contact(IdVO id, NonEmptyStringVO firstName, NonEmptyStringVO lastName,
+            Option<DateOfBirthVO> dateOfBirth, Option<NonEmptyStringVO> twitterHandle)
         {
             Id = id;
             FirstName = firstName;
@@ -17,34 +17,34 @@ namespace CSharpDemos
             TwitterHandle = twitterHandle;
         }
 
-        private static readonly Func<Id, NonEmptyString, NonEmptyString, Option<DateOfBirth>, Option<NonEmptyString>, Contact> 
+        private static readonly Func<IdVO, NonEmptyStringVO, NonEmptyStringVO, Option<DateOfBirthVO>, Option<NonEmptyStringVO>, Contact>
             Create
-            = (id, firstName, lastName, optDob, optTwitter) 
+            = (id, firstName, lastName, optDob, optTwitter)
                 => new Contact(id, firstName, lastName, optDob, optTwitter);
 
         // Not sure if this function should be moved somewhere else
-        public static Validation<Contact> CreateValidContact(Option<Id> optId, Option<NonEmptyString> optFirstName,
-            Option<NonEmptyString> optLastName, Option<DateOfBirth> optDob,
-            Option<NonEmptyString> optTwitterHandle)
+        public static Validation<Contact> CreateValidContact(Option<IdVO> optId, Option<NonEmptyStringVO> optFirstName,
+            Option<NonEmptyStringVO> optLastName, Option<DateOfBirthVO> optDob,
+            Option<NonEmptyStringVO> optTwitterHandle)
         {
-            Validation<Id> ValidateId(Option<Id> opt) 
+            Validation<IdVO> ValidateId(Option<IdVO> opt)
                 => opt.Match(
-                    () => Error("invalid Id"), 
+                    () => Error("invalid Id"),
                     x => Valid(x));
 
-//            Func<Option<Id>, Validation<Id>> ValidateId2 
-//                = opt => opt.Match(
-//                    () => Error("invalid Id"), 
-//                    x => Valid(x));
+            //            Func<Option<Id>, Validation<Id>> ValidateId2 
+            //                = opt => opt.Match(
+            //                    () => Error("invalid Id"), 
+            //                    x => Valid(x));
 
-            Validation<NonEmptyString> ValidateFirstName(Option<NonEmptyString> opt) 
+            Validation<NonEmptyStringVO> ValidateFirstName(Option<NonEmptyStringVO> opt)
                 => opt.Match(
-                    () => Error("invalid FirstName"), 
+                    () => Error("invalid FirstName"),
                     s => Valid(s));
 
-            Validation<NonEmptyString> ValidateLastName(Option<NonEmptyString> opt) 
+            Validation<NonEmptyStringVO> ValidateLastName(Option<NonEmptyStringVO> opt)
                 => opt.Match(
-                    () => Error("invalid LastName"), 
+                    () => Error("invalid LastName"),
                     s => Valid(s));
 
             return Valid(Create)
@@ -54,13 +54,13 @@ namespace CSharpDemos
                 .Apply(optDob)
                 .Apply(optTwitterHandle);
         }
-        
-        public Id Id { get; }
-        public NonEmptyString FirstName { get; }
-        public NonEmptyString LastName { get; }
-        public Option<DateOfBirth> DateOfBirth { get; }
-        public Option<NonEmptyString> TwitterHandle { get; }
-        
+
+        public IdVO Id { get; }
+        public NonEmptyStringVO FirstName { get; }
+        public NonEmptyStringVO LastName { get; }
+        public Option<DateOfBirthVO> DateOfBirth { get; }
+        public Option<NonEmptyStringVO> TwitterHandle { get; }
+
         public override string ToString() => $"Id: {Id}: {FirstName} {LastName} (DOB: {DateOfBirth}, Twitter: {TwitterHandle})";
     }
 }

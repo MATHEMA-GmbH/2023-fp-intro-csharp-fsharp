@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using LaYumba.Functional;
+using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace LaYumbaDemo.Tests
@@ -41,26 +40,26 @@ namespace LaYumbaDemo.Tests
             // Arrange
             var neighbors = new List<Neighbor>
             {
-                new Neighbor {FirstName = "John", Pets = new List<string> {"Fluffy", "Thor"}},
-                new Neighbor {FirstName = "Tim"},
-                new Neighbor {FirstName = "Carl", Pets = new List<string> {"Sybil"}}
+                new() {FirstName = "John", Pets = new() {"Fluffy", "Thor"}},
+                new() {FirstName = "Tim"},
+                new() {FirstName = "Carl", Pets = new() {"Sybil"}}
             };
 
             // Act
             var pets = neighbors.Bind(n => n.Pets);
             //var pets = neighbors.SelectMany(n => n.Pets);
-            
+
             // Assert
-            pets.Should().BeEquivalentTo(new List<string> {"Fluffy", "Thor", "Sybil"});
+            pets.Should().BeEquivalentTo(new List<string> { "Fluffy", "Thor", "Sybil" });
         }
 
         private class Neighbor
         {
             public string FirstName { get; set; }
-            public List<string> Pets { get; set; } = new List<string>();
+            public List<string> Pets { get; set; } = new();
         }
 
-                // ========================================================================================
+        // ========================================================================================
         // Chapter 4: Map, Bind, Where and ForEach; Functors and Monads
 
         // 4.1 Applying a function to a structure's inner value
