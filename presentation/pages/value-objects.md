@@ -39,11 +39,11 @@ class Kunde {
 }
 ```
 
-----
+---
 
 ![img](/images/wikipedia-value-objects.png)
 
-----
+---
 
 ## Value Objects
 
@@ -51,13 +51,13 @@ class Kunde {
 - immutable
 - equality by structure
 
-----
+---
 
 ### Nur gültige Objekte
 
 Es muss bei der Erstellung gewährleistet sein, dass das Objekt gültig ist.
 
-----
+---
 
 ### Nur gültige Objekte
 
@@ -66,7 +66,7 @@ Optionen:
 - Konstruktor mit allen Parametern
 - statische Hilfsmethode & privater Konstruktor
 
-----
+---
 
 #### Value Objects erstellen / 1
 
@@ -89,7 +89,7 @@ class Geld
 }
 ```
 
-----
+---
 
 #### Value Objects erstellen / 2
 
@@ -117,7 +117,7 @@ class Geld
 }
 ```
 
-----
+---
 
 ### Immutability
 
@@ -127,13 +127,13 @@ Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch
 - kein public oder private setter
 - kein parameterloser Konstrukor
 
-----
+---
 
 ### Equality by structure
 
 Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 
-----
+---
 
 ### Exkurs: Vergleichbarkeit
 
@@ -141,7 +141,7 @@ Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 - Equality by id
 - Equality by structure
 
-----
+---
 
 ### Equality by structure
 
@@ -156,3 +156,26 @@ override bool Equals(Geld other)
 
 override int GetHashCode() { /* ... */ }
 ```
+
+---
+
+### C# 9 and greater...
+
+C# records sind ein erster Schritt in die richtige Richtung:
+
+- immutable
+
+---
+
+### Exkurs
+
+- manchmal genügt ein (leichtgewichtiges C#) record
+- aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Objekt, DDD)
+- (OO vs FP) und DDD
+    - OO: Objekt mit Verhalten -> Ursprung von Value Objekt (und DDD)
+    - FP: Strikte Trennung von Daten und Verhalten
+
+Das Schöne an den unterschiedlichen Meinungen ist: 
+
+- man kann es situationsbedingt einfach lösen 
+- Und sich das Beste rauspicken
