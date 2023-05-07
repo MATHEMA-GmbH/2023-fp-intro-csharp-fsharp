@@ -14,7 +14,7 @@ namespace CSharpRefactor
             DiscountedAmount = discountedAmount;
             ErrorText = null;
         }
-        
+
         public InvoiceParseResult(int id, string errorText)
         {
             Id = id;
@@ -29,18 +29,18 @@ namespace CSharpRefactor
             {
                 int hash = 17;
                 hash = hash * 23 + Id.GetHashCode();
-                
+
                 // Suitable nullity checks etc, of course :)
                 if (Amount.HasValue)
                 {
                     hash = hash * 23 + Amount.Value.GetHashCode();
                 }
-                
+
                 if (DiscountedAmount.HasValue)
                 {
                     hash = hash * 23 + DiscountedAmount.Value.GetHashCode();
                 }
-                
+
                 if (ErrorText != null)
                 {
                     hash = hash * 23 + ErrorText.GetHashCode();
@@ -51,14 +51,12 @@ namespace CSharpRefactor
 
         public override bool Equals(object obj)
         {
-            var item = obj as InvoiceParseResult;
-
-            if (item == null)
+            if (obj is not InvoiceParseResult item)
             {
                 return false;
             }
 
-            return 
+            return
                 Id.Equals(item.Id)
                 && (Amount.HasValue && item.Amount.HasValue && Amount.Equals(item.Amount))
                 || (!Amount.HasValue && !item.Amount.HasValue)

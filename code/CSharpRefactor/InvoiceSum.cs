@@ -22,7 +22,7 @@ namespace CSharpRefactor
                 sum += invoice.Amount ?? 0;
                 discountedSum += invoice.DiscountedAmount ?? 0;
             }
-            
+
             return new InvoicesSum(sum, discountedSum);
         }
     }

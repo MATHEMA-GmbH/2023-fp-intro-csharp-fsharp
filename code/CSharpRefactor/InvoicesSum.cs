@@ -10,7 +10,7 @@ namespace CSharpRefactor
             Sum = sum;
             DiscountedSum = discountedSum;
         }
-        
+
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
