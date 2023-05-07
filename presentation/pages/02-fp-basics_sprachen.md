@@ -7,12 +7,16 @@ layout: two-cols
   src="/images/fp-languages-overview.png"
 />
 
+<div id="sig1">Image: "Get Programming with F#", Isaac Abraham</div>
+
 ::right::
 
-- Schränken uns diese FP Paradigmen ein?
-- Wie kann man mit diesem "Purismus" Software schreiben, die etwas tut?
+- Die Abbildung stellt keine Wertung dar!
+- Man sollte verstehen, wo auf dieser Abbildung man sich befindet
 
-TODOs
-
-- TODO add image source
-- TODO add bullet points from other presentation
+<style>
+#sig1 {
+  margin-top:350px;
+  font-size: 12px;
+}
+</style>
