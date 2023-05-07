@@ -7,8 +7,12 @@ namespace CSharpDemos
 {
     public class Contact
     {
-        private Contact(IdVO id, NonEmptyStringVO firstName, NonEmptyStringVO lastName,
-            Option<DateOfBirthVO> dateOfBirth, Option<NonEmptyStringVO> twitterHandle)
+        private Contact(
+            IdVO id,
+            NonEmptyStringVO firstName,
+            NonEmptyStringVO lastName,
+            Option<DateOfBirthVO> dateOfBirth,
+            Option<NonEmptyStringVO> twitterHandle)
         {
             Id = id;
             FirstName = firstName;
@@ -17,14 +21,18 @@ namespace CSharpDemos
             TwitterHandle = twitterHandle;
         }
 
+        // Internal Create Function
         private static readonly Func<IdVO, NonEmptyStringVO, NonEmptyStringVO, Option<DateOfBirthVO>, Option<NonEmptyStringVO>, Contact>
             Create
             = (id, firstName, lastName, optDob, optTwitter)
                 => new Contact(id, firstName, lastName, optDob, optTwitter);
 
-        // Not sure if this function should be moved somewhere else
-        public static Validation<Contact> CreateValidContact(Option<IdVO> optId, Option<NonEmptyStringVO> optFirstName,
-            Option<NonEmptyStringVO> optLastName, Option<DateOfBirthVO> optDob,
+        // Public Create Function
+        public static Validation<Contact> CreateValidContact(
+            Option<IdVO> optId,
+            Option<NonEmptyStringVO> optFirstName,
+            Option<NonEmptyStringVO> optLastName,
+            Option<DateOfBirthVO> optDob,
             Option<NonEmptyStringVO> optTwitterHandle)
         {
             Validation<IdVO> ValidateId(Option<IdVO> opt)
