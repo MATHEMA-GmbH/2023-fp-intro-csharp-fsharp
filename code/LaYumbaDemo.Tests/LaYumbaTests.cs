@@ -1,8 +1,5 @@
-using System;
 using FluentAssertions;
-using LaYumba.Functional;
 using Xunit;
-using Unit = System.ValueTuple; // <- don't use void!!
 
 namespace LaYumbaDemo.Tests
 {
@@ -15,7 +12,7 @@ namespace LaYumbaDemo.Tests
             true.Should().BeTrue();
         }
         // ========================================================================================
-        // Chapter 5: Function composition, method chaining, functional domain modelling
+        // Chapter 5: Function composition, method chaining, functional domain modeling
         // TODO
 
         // ========================================================================================

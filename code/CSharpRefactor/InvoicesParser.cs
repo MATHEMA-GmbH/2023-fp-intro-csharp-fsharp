@@ -21,7 +21,7 @@ namespace CSharpRefactor
         {
             var parsedResults = new Dictionary<string, InvoiceParseResult>();
             var nextId = 0;
-            
+
             foreach (var filePath in _invoiceFilePaths)
             {
                 try
@@ -30,17 +30,17 @@ namespace CSharpRefactor
 
                     if (contents.Length == 1)
                     {
-                        if (Decimal.TryParse(contents[0], out var invoiceAmount))
+                        if (decimal.TryParse(contents[0], out var invoiceAmount))
                         {
                             decimal? discountedAmount = null;
-                            if (_discountPercentage.HasValue 
-                                && _isDiscountAllowed.HasValue 
+                            if (_discountPercentage.HasValue
+                                && _isDiscountAllowed.HasValue
                                 && _isDiscountAllowed.Value)
                             {
                                 discountedAmount = invoiceAmount - (invoiceAmount * (_discountPercentage / 100m));
                             }
-                    
-                            parsedResults.Add(filePath, new InvoiceParseResult(nextId++, invoiceAmount, discountedAmount));   
+
+                            parsedResults.Add(filePath, new InvoiceParseResult(nextId++, invoiceAmount, discountedAmount));
                         }
                         else
                         {
@@ -50,10 +50,10 @@ namespace CSharpRefactor
                 }
                 catch (Exception e)
                 {
-                    parsedResults.Add(filePath, new InvoiceParseResult(nextId++, e.Message)); 
+                    parsedResults.Add(filePath, new InvoiceParseResult(nextId++, e.Message));
                 }
             }
-            
+
             return parsedResults;
         }
     }
