@@ -29,7 +29,10 @@ layout: two-cols
 - <logos-mastodon-icon /> @drechsler@floss.social
 - <logos-linkedin-icon /> https://www.linkedin.com/in/patrick-drechsler-985a2911/
 
-Slides: TODO & QR-Code
+Slides: 
+
+- QR-Code 👉
+- https://mathema-gmbh.github.io/2023-05-magdeburger-devdays-fp-csharp-to-fsharp
 
 ::right::
 
@@ -39,6 +42,10 @@ Slides: TODO & QR-Code
 - <logos-github-icon /> https://github.com/groma84
 - <mdi-web /> Blog: https://elm.finde-ich-super.de
 - <logos-twitter /> @mobilgroma
+
+<img 
+  class="absolute bottom-10 right-50 w-60"
+  src="/images/qr-code-magdegeburger-devdays.png" >
 
 ---
 
