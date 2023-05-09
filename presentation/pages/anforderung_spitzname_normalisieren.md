@@ -1,5 +1,11 @@
+---
+title: Neue Anforderung!
+---
+
 ## Neue Anforderung!
 
-- Das Data Science Team möchte eine Auswertung über die Häufigkeit von Spitznamen erstellen.
-- Dazu soll der Spitzname jedes Eintrags normalisiert (hier: zu Großbuchstaben umgewandelt) werden - wenn er vorhanden ist.
-- Es wird eine Menge von Einträgen als Argument übergeben und es darf in der Rückgabe nicht unterschlagen werden, wenn bei einem Eintrag gar kein Spitzname gesetzt ist. 
+- Es wird eine Menge von Personen verarbeitet
+- Der Spitzname jedes Eintrags soll zu Großbuchstaben umgewandelt werden - wenn er vorhanden ist.
+- Danach wird die Länge jedes Spitznamens ermittelt - wenn er vorhanden ist 
+- Dann wird die längste Länge ermittelt und zurückgegeben - fehlende Spitznamen werden als 0 gewertet
+
