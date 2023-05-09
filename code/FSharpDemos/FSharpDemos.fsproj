@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Exploration.fs" />
     <Compile Include="OptionExtensions.fs" />
     <Compile Include="ResultExtensions.fs" />
     <Compile Include="ResultBuilder.fs" />
