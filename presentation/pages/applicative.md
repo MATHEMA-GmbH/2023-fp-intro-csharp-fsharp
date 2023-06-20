@@ -1,15 +1,15 @@
 ### Problem: Funktion mit mehreren eingepackten Parametern
 
 ```fsharp
-let add a b = a + b
+let add (a: int) (b: int) : int = a + b
 
-let onlyPositive i =
+let onlyPositive (i: int) : int option =
   if i > 0 then
     Some i
   else
     None
 
-let addTwoNumbers a b =
+let addTwoNumbers (a: int) (b: int) : int option =
   let positiveA = onlyPositive a
   let positiveB = onlyPositive b
   // passt nicht, 2x int erwartet, aber 2x int option übergeben
@@ -49,13 +49,13 @@ let addTwoNumbers a b =
 
 ```fsharp
 // F#
-let sum a b c = a + b + c
+let sum (a: int) (b: int) (c: int) : int = a + b + c
 
-let onlyPositive i =
+let onlyPositive (i: int) : int option =
     if i > 0 then Some i
     else None
 
-let addNumbers a b c =
+let addNumbers (a: int) (b: int) (c: int) : int option =
     let positiveA = onlyPositive a
     let positiveB = onlyPositive b
     let positiveC = onlyPositive c

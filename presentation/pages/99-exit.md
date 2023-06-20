@@ -46,9 +46,3 @@ Slides:
 <img 
   class="absolute bottom-10 right-50 w-60"
   src="/images/qr-code-magdegeburger-devdays.png" >
-
----
-
-## Feedback und Fragen
-
----

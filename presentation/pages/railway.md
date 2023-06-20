@@ -1,6 +1,6 @@
 ## Railway Oriented Programming
 
-Funktionale Programmierung wird oft als das "Zusammenstöpseln" von Funktionen dargestellt...
+Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargestellt...
 
 ---
 
@@ -104,8 +104,6 @@ bind: (a -> M b) -> M a -> M b
 
 - FP-Jargon: eine Wrapper-Klasse, die `bind` bereitstellt, wird **Monade** genannt (sehr stark vereinfacht!).
 
-TODO:
-Beispiel: siehe `ChainingOptions.Chaining_option_returning_functions`.
 
 ---
 

@@ -1,6 +1,6 @@
 ## Mögliches Vorhandensein eines Werts
 
-#### oder: null muss weg.
+#### oder: null ist gefährlich.
 
 ----
 
@@ -96,6 +96,7 @@ public string Stringify<T>(Option<T> data)
 - Auch für Nicht-Programmierer verständlich(er): "optional" vs. "nullable"
 - Die Signatur von Match erzwingt eine Behandlung beider Fälle - nie wieder vergessene Null-Checks!
 - Achtung: In C# bleibt das Problem, dass "Option" auch ein Objekt ist - und daher selbst null sein kann
+- daher mindestens: in C# explizites NULL enablen mit `<Nullable>enable</Nullable>` 
 
 ---
 

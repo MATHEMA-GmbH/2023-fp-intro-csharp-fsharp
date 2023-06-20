@@ -1,12 +1,8 @@
 ## FP 101 - functions
 
-### 1st class functions in C# #
+### 1st class functions in C#
 
 Funktionen können als Parameter verwendet werden
-
----
-
-...Ähnlichkeit mit Interfaces in der OO-Welt...
 
 ---
 
@@ -33,3 +29,15 @@ class SomeService
 ```
 
 (Verhalten als Parameter übergeben)
+
+---
+
+### Funktionen als Rückgabewert
+
+```csharp
+
+Func<double, string> GetConverterFn(bool withDecimals) 
+  => withDecimals ? ToStringWithDecimals : ToStringNoDecimals;
+}
+
+```
