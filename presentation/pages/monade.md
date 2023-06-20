@@ -1,19 +1,19 @@
 ### Problem: Verkettung eingepackter Werte
 
 ```fsharp
-let storeInDatabase path content = 
+let storeInDatabase (path: string) (content: string) : string option = 
   try
     System.IO.File.WriteAllText(path, content)
     Some content
   with
     ex -> None
 
-let stringToOption s =
+let stringToOption (s: string) : string option =
     if String.IsNullOrWhiteSpace s then None else Some s
 
-let toUpper (s: string) = s.ToUpper()
+let toUpper (s: string) : string = s.ToUpper()
 
-let nonEmptyStringStoreInPersistenceAndToUpper path content =
+let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) : ??? =
     let nonEmpty = stringToOption content
     // passt nicht: "string" erwartet, aber "string option" bekommen
     let stored = storeInDatabase path nonEmpty
@@ -45,19 +45,19 @@ let nonEmptyStringStoreInPersistenceAndToUpper path content =
 ## Verkettung
 
 ```fsharp
-let storeInDatabase path content = 
+let storeInDatabase (path: string) (content: string) : string option = 
   try
     System.IO.File.WriteAllText(path, content)
     Some content
   with
     ex -> None
 
-let stringToOption s =
+let stringToOption (s: string) : string option =
     if String.IsNullOrWhiteSpace s then None else Some s
 
-let toUpper (s: string) = s.ToUpper()
+let toUpper (s: string) : string = s.ToUpper()
 
-let nonEmptyStringStoreInPersistenceAndToUpper path content =
+let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) : string option =
     let nonEmpty = stringToOption content
     let stored = Option.bind (storeInDatabase path) nonEmpty
     let nonEmptyUpper = Option.map toUpper stored

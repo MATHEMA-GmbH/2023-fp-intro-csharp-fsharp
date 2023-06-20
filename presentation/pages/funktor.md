@@ -1,6 +1,6 @@
 ## Kleine Funktionen zu größeren verbinden
 
-- Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt
+- Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt ("Komposition")
 - Problem: Nicht alle Funktionen passen gut zusammen
 
 ----
@@ -11,15 +11,15 @@
 // F#
 module X
 
-let toUpper (s: string) = s.ToUpper()
+let toUpper (s: string) : string = s.ToUpper()
 
-let stringToOption s =
+let stringToOption (s: string) : string option =
     if String.IsNullOrWhiteSpace s then
         None
     else
         Some s
 
-let nonEmptyStringToUpper s =
+let nonEmptyStringToUpper (s: string) : ??? =
     let nonEmpty = stringToOption s
     // passt nicht: "string" erwartet, aber "string option" bekommen
     let nonEmptyUpper = toUpper nonEmpty
@@ -71,15 +71,15 @@ static class X
 ### Wert in Container, Funktion passt nicht
 
 ```fsharp
-let toUpper (s: string) = s.ToUpper()
+let toUpper (s: string) : string = s.ToUpper()
 
-let stringToOption s =
+let stringToOption (s: string) : string option =
     if String.IsNullOrWhiteSpace s then
         None
     else
         Some s
 
-let nonEmptyStringToUpper s =
+let nonEmptyStringToUpper (s: string) : string option =
     let nonEmpty = stringToOption s
     let nonEmptyUpper = Option.map toUpper nonEmpty
 ```

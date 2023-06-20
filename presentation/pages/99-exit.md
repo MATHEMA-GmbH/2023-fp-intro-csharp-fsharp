@@ -1,3 +1,13 @@
+# Fazit
+
+- Konzepte der Funktionalen Programmierung halten in mehr und mehr Programmiersprachen Einzug
+- Ideen der Funktionalen Programmierung können auch "nicht-funktionalen" Code verbessern
+- Zusätzliches Werkzeug im Werkzeugkasten
+
+### Die Beschäftigung damit lohnt sich!
+
+---
+
 # Danke
 
 ---
@@ -32,7 +42,7 @@ layout: two-cols
 Slides: 
 
 - QR-Code 👉
-- https://mathema-gmbh.github.io/2023-05-magdeburger-devdays-fp-csharp-to-fsharp
+- https://mathema-gmbh.github.io/2023-06-dwx-fp-csharp-to-fsharp/
 
 ::right::
 
@@ -42,13 +52,9 @@ Slides:
 - <logos-github-icon /> https://github.com/groma84
 - <mdi-web /> Blog: https://elm.finde-ich-super.de
 - <logos-twitter /> @mobilgroma
-
+- <logos-mastodon-icon /> @groma@kanoa.de
+-  groma.bsky.social
+  
 <img 
-  class="absolute bottom-10 right-50 w-60"
-  src="/images/qr-code-magdegeburger-devdays.png" >
-
----
-
-## Feedback und Fragen
-
----
+  class="absolute bottom-0 right-50 w-60"
+  src="/images/qr-code-dwx2023.png" >

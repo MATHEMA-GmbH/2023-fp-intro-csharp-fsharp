@@ -17,5 +17,5 @@ Code wird in drei Arten geteilt:
 
 - Trennung zwischen Verhalten und Datenstrukur
   - Calculations: Pure Functions
-  - Actions: Impure Functions
+  - Actions: Seiteneffekte
   - Data

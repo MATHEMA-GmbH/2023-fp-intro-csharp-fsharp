@@ -2,14 +2,14 @@ name: Deploy pages
 on:
   push:
     branches:
-      - magdeburger-devdays
+      - dwx
 
 jobs:
   deploy:
 
     env:
       PRESENTATION_FOLDER: 'presentation'
-      TARGET_REPO_NAME: '2023-05-magdeburger-devdays-fp-csharp-to-fsharp'
+      TARGET_REPO_NAME: '2023-06-dwx-fp-csharp-to-fsharp'
       TARGET_GITHUB_OWNER: 'MATHEMA-GmbH'
 
     runs-on: ubuntu-latest
