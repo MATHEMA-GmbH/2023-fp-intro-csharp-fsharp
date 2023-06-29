@@ -76,4 +76,35 @@ public class OneOfTests
                 s => (int.TryParse(s, out var n), n),
                 i => (true, i));
     }
+
+
+    public record Rectangle(int Width, int Height);
+    public record Circle(int Radius);
+    
+    public class Shape : OneOfBase<Circle, Rectangle>
+    {
+        private Shape(OneOf<Circle, Rectangle> _) : base(_) {}
+        public static implicit operator Shape(Rectangle _) => new(_);
+        public static implicit operator Shape(Circle _) => new(_);
+    }
+
+    private static string Describe(Shape shape) =>
+        shape.Match(
+            circle => $"Circle has radius {circle.Radius}",
+            rectangle => $"Rectangle has height {rectangle.Height} " +
+                         $"and width {rectangle.Width}");
+    
+    [Fact]
+    public void Shape_tests()
+    {
+        Shape shape1 = new Circle(42);
+        Shape shape2 = new Rectangle(2, 3);
+
+        var result1 = Describe(shape1);
+        var result2 = Describe(shape2);
+
+        result1.Should().Be("Circle has radius 42");
+        result2.Should().Be("Rectangle has height 3 and width 2");
+    }
 }
+
