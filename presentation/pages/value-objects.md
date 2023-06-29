@@ -15,23 +15,23 @@ Warum?
 ### Beispiele
 
 ```csharp
-// :-(
+// 😡
 void Einzahlen(int wert, SomeEnum waehrung) { /* ... */ }
 
-// ;-)
+// 😀
 void Einzahlen(Geld geld) { /* ... */ }
 ```
 
 ```csharp
 class Kunde {
-    int Alter { get; set; } // :-(
+    int Alter { get; set; } // 😡
     
     // ist `i` das aktuelle Alter oder das Geburtsjahr??
     bool IstVolljaehrig(int i) { /* ... */}
 }
 
 class Kunde {
-    Alter Alter { get; set; } // ;-)
+    Alter Alter { get; set; } // 😀
 
     bool IstVolljaehrig(Alter alter) { /* ... */}
 

@@ -13,7 +13,7 @@ That's it!
 ```csharp
 public class Customer
 {
-  public string Name { get; set; } // set -> mutable :-(
+  public string Name { get; set; } // set -> mutable 😡
 }
 ```
 
@@ -27,7 +27,7 @@ public class Customer
     Name = name;
   }
   
-  public string Name { get; } // <- immutable
+  public string Name { get; } // <- immutable 😀
 }
 ```
 
