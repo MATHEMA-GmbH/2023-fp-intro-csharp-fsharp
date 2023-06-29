@@ -1,3 +1,8 @@
 .slidev-code * {
     font-family: JetBrains;
 }
+
+.slidev-code .token.comment {
+    background-color: lightgray;
+    color: black;
+}
