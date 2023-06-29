@@ -47,9 +47,9 @@ var people = new List<Person> {
 }
 
 var averageIncomeAbove25 = people
-  Where(p => p.Age > 25) // "Filter"
-  Select(p => p.Income)  // "Map"
-  Average();             // "Reduce"
+  .Where(p => p.Age > 25) // "Filter"
+  .Select(p => p.Income)  // "Map"
+  .Average();             // "Reduce"
 ```
 
 - aussagekräftiger
