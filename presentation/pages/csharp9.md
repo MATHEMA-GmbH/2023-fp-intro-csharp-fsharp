@@ -1,7 +1,7 @@
 ### C# 9 and greater...
 
 - (✅) record types
-- 💥 discriminated unions
+- 💥 discriminated unions (Tip: "OneOf" [https://github.com/mcintyre321/OneOf](https://github.com/mcintyre321/OneOf))
 - (✅) pattern matching
 - (✅) immutability / non-nullability
 
