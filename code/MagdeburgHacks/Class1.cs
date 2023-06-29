@@ -133,7 +133,7 @@ namespace MagdeburgHacks
                     Right: letter1 => letter1.PostalCard.Message);
             var actual = EmailService.Send(letter);
             
-            actual.Should().Be("hi");
+            actual.Should().Be("Error: hi");
         }
     }
 

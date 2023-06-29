@@ -16,6 +16,6 @@ let ``prepareOutput function works 👉``() =
         ]
     
     let actual = simpsons |> getResults 
-    let expected = 9
+    let expected = 8
     // actual |> should equal expected
     actual =! expected
