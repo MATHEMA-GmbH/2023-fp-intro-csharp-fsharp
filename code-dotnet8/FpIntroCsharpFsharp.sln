@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionF
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Examples1FSharpTests", "tests\Examples1FSharpTests\Examples1FSharpTests.fsproj", "{C2738B87-CCB4-4586-83B6-B56B0FCCD43D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Examples1FSharp", "src\Examples1FSharp\Examples1FSharp.fsproj", "{0E373026-4621-47C4-9770-F63D8048E3CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,9 +41,19 @@ Global
 		{074B6425-386E-4E5E-A1EC-1A786E3E3719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{074B6425-386E-4E5E-A1EC-1A786E3E3719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{074B6425-386E-4E5E-A1EC-1A786E3E3719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2738B87-CCB4-4586-83B6-B56B0FCCD43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2738B87-CCB4-4586-83B6-B56B0FCCD43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2738B87-CCB4-4586-83B6-B56B0FCCD43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2738B87-CCB4-4586-83B6-B56B0FCCD43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E373026-4621-47C4-9770-F63D8048E3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E373026-4621-47C4-9770-F63D8048E3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E373026-4621-47C4-9770-F63D8048E3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E373026-4621-47C4-9770-F63D8048E3CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F21FC413-D73E-4148-B514-D67062F1F6E6} = {1B3A8EB2-2B47-483D-A11A-F835FFB41C4F}
 		{074B6425-386E-4E5E-A1EC-1A786E3E3719} = {CEA294EA-E16D-4F72-8B4D-E1D8EE8CE0E9}
+		{C2738B87-CCB4-4586-83B6-B56B0FCCD43D} = {CEA294EA-E16D-4F72-8B4D-E1D8EE8CE0E9}
+		{0E373026-4621-47C4-9770-F63D8048E3CE} = {1B3A8EB2-2B47-483D-A11A-F835FFB41C4F}
 	EndGlobalSection
 EndGlobal
