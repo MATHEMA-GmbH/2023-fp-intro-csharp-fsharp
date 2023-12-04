@@ -42,6 +42,7 @@ let addTwoNumbers (a: int) (b: int) : int option =
 ```
 
 - Andere Bezeichnungen für "apply": ap, &lt;*&gt;
+- wird oft zur Validierung von Eingaben genutzt
 
 ---
 

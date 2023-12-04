@@ -1,3 +1,9 @@
+## "Programming Patterns" in FP
+
+![Scott Wlaschin shows FP patterns in one of his talks](/images/patterns-and-principles-in-fp.png)
+
+----
+
 ## Kleine Funktionen zu größeren verbinden
 
 - Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt ("Komposition")
@@ -64,6 +70,7 @@ static class X
 ```fsharp
   map: (a -> b) -> F a -> F b
 ```
+
 - Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), &lt;$&gt;, &lt;!&gt;
 
 ----

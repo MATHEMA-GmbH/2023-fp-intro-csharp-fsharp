@@ -42,6 +42,8 @@ static string Describe(Shape shape) =>
 
 ::right::
 
+### &nbsp;
+
 ```csharp
 [Fact]
 public void Shape_tests()

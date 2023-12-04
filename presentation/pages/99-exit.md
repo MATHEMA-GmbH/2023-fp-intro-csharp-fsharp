@@ -42,7 +42,7 @@ layout: two-cols
 Slides: 
 
 - QR-Code 👉
-- https://mathema-gmbh.github.io/2023-06-dwx-fp-csharp-to-fsharp/
+- https://mathema-gmbh.github.io/2023-12-it-tage-fp-intro-csharp-fsharp/
 
 ::right::
 
@@ -51,10 +51,8 @@ Slides:
 - <mdi-email /> martin.grotz@mathema.de
 - <logos-github-icon /> https://github.com/groma84
 - <mdi-web /> Blog: https://elm.finde-ich-super.de
-- <logos-twitter /> @mobilgroma
 - <logos-mastodon-icon /> @groma@kanoa.de
--  groma.bsky.social
   
 <img 
   class="absolute bottom-0 right-50 w-60"
-  src="/images/qr-code-dwx2023.png" >
+  src="/images/qr-code-it-tage-frankfurt-2023.png" >
