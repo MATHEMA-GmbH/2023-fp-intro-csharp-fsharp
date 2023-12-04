@@ -49,3 +49,4 @@
 
 - Nuget-Paket: [https://github.com/vkhorikov/CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions)
 - hat alles was man braucht, ohne zu kompliziert zu sein
+- setzen wir erfolgreich in Projekten ein

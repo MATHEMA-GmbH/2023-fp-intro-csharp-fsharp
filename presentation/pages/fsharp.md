@@ -51,6 +51,7 @@
 ```fsharp
 // Achtung: = ist hier keine Zuweisung, sondern heißt 
 // "linke und rechte Seite sind gleich und bleiben es auch immer"
+// (oder wie in Mathe: "es sei x gleich 3")
 let x = 3
 let add a b = a + b
 let m = if 3 > 0 then 7 else 42
@@ -65,7 +66,7 @@ y <- 42
 ## Typ-Inferenz
 
 ```fsharp
-// Typen werden automatisch abgeleitet sofern möglich
+// Typen werden automatisch geschlussfolgert sofern möglich
 let double a = a * 2 // int -> int
 
 // Explizite Angaben möglich
@@ -76,7 +77,7 @@ let doubleExplicit (a: int) : int = a * 2
 
 ## Currying
 
-> Currying ist die Umwandlung einer Funktion mit mehreren Argumenten in eine Funktion mit einem Argument, die wiederum eine Funktion zurückgibt mit dem Rest der Argumente.
+> Currying ist die Umwandlung einer Funktion mit mehreren Parametern in eine neue Funktion mit nur einem Parameter, die wiederum eine Funktion zurückgibt mit dem Rest der Parameter.
 
 ```fsharp
 // int -> int -> int -> int
@@ -89,11 +90,12 @@ let addThree a b c = a + b + c
 ## Partial Application
 
 - Eine Funktion mit mehreren Parametern bekommt nur einen Teil ihrer Argumente übergeben - der Rest bleibt offen und kann später ausgefüllt werden
+- klappt nur so einfach wegen automatischem Currying in F#
 
 ```fsharp
 // Partial Application
 let add a b = a + b // int -> (int -> (int))
-let add2 = add 2 // (int -> (int))
+let add2 = add 2 // (int -> (int)), "a" ist mit 2 ausgefüllt, "b" ist noch offen
 let six = add2 4 // (int)
 let ten = add2 8 // (int)
 ```
@@ -105,9 +107,9 @@ let ten = add2 8 // (int)
 ```fsharp
 // der letzte Parameter kann mit dem Ergebnis 
 // der vorherigen Expression ausgefüllt werden
-let double a = a * 2
-4 |> double // ergibt 8
-4 |> double |> double // ergibt 16
+let triple a = a * 3
+4 |> triple // ergibt 12
+4 |> triple |> triple // ergibt 36
 ```
 
 ----
@@ -158,6 +160,7 @@ type ShoppingCart = {
 }
 
 // Typ muss nur angegeben werden wenn er nicht eindeutig ist
+// hier wird er z.B. automatisch erkannt
 let shoppingCart = {
     products = []
     total = 42.42
@@ -186,7 +189,7 @@ let shoppingCart = {
 type Vehicle = Bike | Car | Bus
 ```
 
-Alle möglichen Zustaende von `Vehicle` sind: `Bike`, `Car`, oder `Bus`. 
+Alle möglichen Zustände von `Vehicle` sind: `Bike`, `Car`, oder `Bus`. 
 
 Dies entspricht der **Summe** der Auswahlmöglichkeiten.
 
@@ -246,4 +249,6 @@ let equal = (thing1 = thing2) // true
 type NonEquatableNonComparable = {
     Id: int
 }
+
+let compare n1 n2 = (n1.Id = n2.Id)
 ```

@@ -5,8 +5,8 @@ defaults:
   layout: "default-with-footer"
 
 # infos for the footer (on slides with the default-with-footer layout)
-occasion: "DWX 2023"
-occasionLogoUrl: "images/DWX_LogoIcon_2023-scaled.jpg.jpg"
+occasion: "IT-Tage 2023"
+occasionLogoUrl: "images/ITT-Logo-Farbe-2023.svg"
 company: "MATHEMA GmbH"
 presenter: "Patrick Drechsler & Martin Grotz"
 contact: "patrick.drechsler@mathema.de & martin.grotz@mathema.de"

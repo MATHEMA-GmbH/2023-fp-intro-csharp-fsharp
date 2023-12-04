@@ -76,7 +76,7 @@ public Option<int> IntifyOption(string s)
 
 ### Wie komme ich an einen eingepackten Wert ran?
 
-> Pattern matching allows you to match a value against some patterns to select a branch of the code.
+> **Pattern matching** allows you to match a value against some patterns to select a branch of the code.
 
 ```csharp
 public string Stringify<T>(Option<T> data)
@@ -97,7 +97,3 @@ public string Stringify<T>(Option<T> data)
 - Die Signatur von Match erzwingt eine Behandlung beider Fälle - nie wieder vergessene Null-Checks!
 - Achtung: In C# bleibt das Problem, dass "Option" auch ein Objekt ist - und daher selbst null sein kann
 - daher mindestens: in C# explizites NULL enablen mit `<Nullable>enable</Nullable>` 
-
----
-
-In FP unterscheidet man die Art der Wrapper-Klassen (z.B. IEnumerable) anhand der Funktionen, die sie bereitstellen

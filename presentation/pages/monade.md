@@ -38,6 +38,7 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 ```fsharp
   bind: (a -> M b) -> M a -> M b
 ```
+
 - Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), &gt;&gt;=
 
 ---
