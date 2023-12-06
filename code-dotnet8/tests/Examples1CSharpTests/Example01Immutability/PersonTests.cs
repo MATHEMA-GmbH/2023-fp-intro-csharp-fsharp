@@ -5,7 +5,7 @@ namespace Examples1CSharpTests.Example01Immutability;
 public class PersonTests
 {
     [Fact]
-    public void Person1_is_immutable()
+    public void Person1_is_mutable()
     {
         var person1 = new Person1("John");
         person1.Name.Should().Be("John");
