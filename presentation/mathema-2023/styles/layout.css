@@ -11,7 +11,7 @@
   font-size: 1.2rem;
 
   h1, h2 {
-    background-image: url(./theme/mat-pictogram-rgb.png);
+    background-image: url(/theme/mat-pictogram-rgb.png);
     background-repeat: no-repeat;
     background-size: 50px;
     background-position-y: center;
