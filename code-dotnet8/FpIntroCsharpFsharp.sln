@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionF
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
+		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Examples1FSharpTests", "tests\Examples1FSharpTests\Examples1FSharpTests.fsproj", "{C2738B87-CCB4-4586-83B6-B56B0FCCD43D}"
