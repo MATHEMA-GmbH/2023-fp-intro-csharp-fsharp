@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Examples1CSharp\Examples1CSharp.csproj" />
+    <ProjectReference Include="..\..\src\Examples1CSharp\Examples1CSharp.csproj"/>
   </ItemGroup>
 </Project>

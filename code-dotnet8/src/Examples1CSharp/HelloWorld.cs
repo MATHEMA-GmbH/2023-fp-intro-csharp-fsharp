@@ -2,5 +2,8 @@
 
 public static class HelloWorld
 {
-  public static string SayHello() => "Hello World!";
+    public static string SayHello()
+    {
+        return "Hello World!";
+    }
 }
