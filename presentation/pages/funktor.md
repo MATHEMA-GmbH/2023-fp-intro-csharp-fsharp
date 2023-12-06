@@ -75,7 +75,10 @@ static class X
 
 ----
 
-### Wert in Container, Funktion passt nicht
+### Lösung: Wert in Container, Funktion kann nichts damit anfangen
+
+- Option.map
+- List.map, Seq.map, Result.map, ...
 
 ```fsharp
 let toUpper (s: string) : string = s.ToUpper()
