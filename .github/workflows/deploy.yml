@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - it-tage-frankfurt
+      - main
 
 jobs:
   deploy:
