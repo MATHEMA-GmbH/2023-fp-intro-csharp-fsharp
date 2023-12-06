@@ -41,6 +41,10 @@ src: ./pages/02-fp-basics_pure_functions.md
 ---
 
 ---
+src: ./pages/02-fp-basics_pure_functions_aufgabe.md
+---
+
+---
 src: ./pages/grokking-simplicity-01.md
 ---
 
@@ -57,6 +61,10 @@ src: ./pages/layumba.md
 ---
 
 ---
+src: ./pages/option_aufgabe.md
+---
+
+---
 src: ./pages/fsharp.md
 ---
 
@@ -69,6 +77,10 @@ src: ./pages/funktor.md
 ---
 
 ---
+src: ./pages/funktor_aufgabe.md
+---
+
+---
 src: ./pages/monade.md
 ---
 
@@ -77,7 +89,15 @@ src: ./pages/railway.md
 ---
 
 ---
+src: ./pages/monade_aufgabe.md
+---
+
+---
 src: ./pages/applicative.md
+---
+
+---
+src: ./pages/applicative_aufgabe.md
 ---
 
 ---
@@ -86,6 +106,10 @@ src: ./pages/veranstaltungen.md
 
 ---
 src: ./pages/introducing_fsharp.md
+---
+
+---
+src: ./pages/fancy-fsharp8-features.md
 ---
 
 ---
