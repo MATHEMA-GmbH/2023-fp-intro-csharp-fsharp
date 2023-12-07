@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Tests.fs"/>
-    <Compile Include="Program.fs"/>
+    <Compile Include="DemoTests.fs" />
+    <Compile Include="Example01ValueObject\PeopleTests.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +16,8 @@
 
   <ItemGroup>
     <PackageReference Include="FSharp.Core"/>
+    <PackageReference Include="FsUnit.xUnit" />
+    <PackageReference Include="Unquote" />
   </ItemGroup>
 
 </Project>
