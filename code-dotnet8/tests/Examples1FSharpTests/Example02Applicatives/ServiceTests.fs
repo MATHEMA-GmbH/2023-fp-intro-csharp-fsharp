@@ -1,0 +1,2 @@
+module Examples1FSharpTests.Example02Applicatives.ServiceTests
+
