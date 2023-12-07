@@ -18,11 +18,14 @@ let ``Person1 is comparable`` () =
     
 [<Fact>]
 let ``Person2 has logic`` () =
+    
     // test helper method
-    let hasValidNames (input: Person2 option) i =
-        match input with
-        | None -> true =! false // fail, should have been valid
-        | Some x -> Person2.value x =! i // pass, should have been valid
+    let hasValidNames (maybePerson: Person2 option) expectedPerson =
+        match maybePerson with
+        | None ->
+            true =! false // fail
+        | Some actualPerson ->
+            Person2.value actualPerson =! expectedPerson // pass
 
     let validPerson = Person2.create "Homer" "Simpson"
     hasValidNames validPerson ("Homer", "Simpson")
