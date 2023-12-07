@@ -1,20 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <GenerateProgramFile>false</GenerateProgramFile>
-    </PropertyGroup>
+  <PropertyGroup>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Compile Include="Tests.fs"/>
-        <Compile Include="Program.fs"/>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemoTests.fs" />
+    <Compile Include="Example01ValueObject\PeopleTests.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\src\Examples1FSharp\Examples1FSharp.fsproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Examples1FSharp\Examples1FSharp.fsproj"/>
+  </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="FSharp.Core" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core"/>
+    <PackageReference Include="FsUnit.xUnit" />
+    <PackageReference Include="Unquote" />
+  </ItemGroup>
 
 </Project>

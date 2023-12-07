@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Compile Include="Library.fs"/>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Library.fs"/>
+    <Compile Include="Example01ValueObject\People.fs" />
+  </ItemGroup>
 
 </Project>
