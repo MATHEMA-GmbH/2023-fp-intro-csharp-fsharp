@@ -1,4 +1,4 @@
-namespace Examples1CSharp.Example01Immutability;
+namespace Examples1CSharp.Example01ValueObject;
 
 public class Person1
 {
