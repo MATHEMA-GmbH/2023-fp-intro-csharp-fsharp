@@ -24,4 +24,13 @@ let ``We can use different assertion libraries - 3 - Unquote 1/2`` () =
 let ``We can use different assertion libraries - 3 - Unquote 2/2`` () =
     // Short hand syntax
     1 =! 1
+
+
+type GrußkarteDummy = { Text: string; Empfänger: string }
+
+[<Fact>]
+let ``German Umlauts are no problem`` () =
+    let actual = { Text = "Hallo"; Empfänger = "Welt" }
+    let expected = { Text = "Hallo"; Empfänger = "Welt" }
+    actual =! expected
     
