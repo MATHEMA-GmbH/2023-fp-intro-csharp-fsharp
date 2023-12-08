@@ -11,7 +11,7 @@ let ``validating happy path`` () =
         receiverLastName = "Maulwurf"
         receiverTitle = "Herr"
         receiverAddress = "Springfield"
-        text = "Liebe Grüße!"
+        text = "Liebe GrÃ¼ÃŸe!"
     }
 
     let validated = validate input
@@ -27,7 +27,7 @@ let ``empty first name gives error`` () =
         receiverLastName = "Maulwurf"
         receiverTitle = "Herr"
         receiverAddress = "Springfield"
-        text = "Liebe Grüße!"
+        text = "Liebe GrÃ¼ÃŸe"
     }
 
     let validated = validate input
