@@ -108,4 +108,17 @@ public class PersonTests
         Action action = () =>  Person9.Create("Monty", "Burns");
         action.Should().Throw<ArgumentException>().WithMessage("Ups. Invalid LastName 'Burns'");
     }
+    
+    [Fact]
+    public void Person10_has_logic()
+    {
+        Grußkarte.ÄÖÜ.Should().Be("ÄÖÜ");
+        Grußkarte.GrußkartenEmpfänger.Should().Be("GrußkartenEmpfänger");
+    }
+}
+
+public static class Grußkarte
+{
+    public static string ÄÖÜ { get; set; } = "ÄÖÜ";
+    public static string GrußkartenEmpfänger { get; set; } = "GrußkartenEmpfänger";
 }
