@@ -79,8 +79,8 @@ let createEmpfaenger vorname nachname postanschrift anrede =
 
 let createKarte empfaenger text =
     {
-    Empfaenger = empfaenger
-    Text = text
+        Empfaenger = empfaenger
+        Text = text
     }
 
 let validate (input : InputDto) : String list = 
