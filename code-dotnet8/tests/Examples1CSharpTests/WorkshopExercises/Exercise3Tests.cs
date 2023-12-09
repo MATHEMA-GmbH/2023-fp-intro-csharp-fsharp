@@ -1,4 +1,3 @@
-using CSharpFunctionalExtensions;
 using Examples1CSharp.WorkshopExercises;
 using FluentAssertions.Execution;
 

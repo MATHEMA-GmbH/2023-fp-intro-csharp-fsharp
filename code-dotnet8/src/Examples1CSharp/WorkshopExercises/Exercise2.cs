@@ -52,11 +52,14 @@ public record Anrede
     public string Value { get; }
 
     public static Maybe<Anrede> Create(string value) =>
-        IsValid(value) 
-            ? new Anrede(value) 
+        IsValid(value)
+            ? new Anrede(value)
             : Maybe.None;
 
     private static bool IsValid(string value) => !string.IsNullOrWhiteSpace(value);
+
+    public Anrede Schreiend() => new(Value.ToUpper(CultureInfo.InvariantCulture));
+
 }
 
 public record Postanschrift
@@ -133,7 +136,7 @@ public record Empfänger(Vorname Vorname, Nachname Nachname, Maybe<Anrede> Optio
     public Maybe<Anrede> AnredeToUpper() =>
         OptionaleAnrede
             .Match(
-                Some: anrede => Anrede.Create(anrede.Value.ToUpper(CultureInfo.InvariantCulture)),
+                Some: anrede => anrede.Schreiend(),
                 None: () => Maybe<Anrede>.None);
 }
 
