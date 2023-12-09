@@ -75,7 +75,7 @@ public record Postanschrift
     private static bool IsValid(string value) => !string.IsNullOrWhiteSpace(value);
 }
 
-public record Empfänger(Vorname Vorname, Nachname Nachname, Maybe<Anrede> AnredeMaybe, Postanschrift Postanschrift)
+public record Empfänger(Vorname Vorname, Nachname Nachname, Maybe<Anrede> OptionaleAnrede, Postanschrift Postanschrift)
 {
     public static Result<Empfänger> CreateV1(string vorname, string nachname, string anrede, string postanschrift)
     {

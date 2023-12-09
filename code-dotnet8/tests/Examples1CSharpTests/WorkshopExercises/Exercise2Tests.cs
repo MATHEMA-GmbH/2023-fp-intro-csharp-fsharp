@@ -24,7 +24,7 @@ public class Exercise2Tests
             var homer = resultHomer.Value!;
             homer.Vorname.Value.Should().Be("Homer");
             homer.Nachname.Value.Should().Be("Simpson");
-            homer.AnredeMaybe.Value.Value.Should().Be("Herr");
+            homer.OptionaleAnrede.Value.Value.Should().Be("Herr");
             homer.Postanschrift.Value.Should().Be("Evergreen Terrace 742");
         }
     }
@@ -42,7 +42,7 @@ public class Exercise2Tests
 
         // Assert
         resultHomer.IsSuccess.Should().BeTrue();
-        resultHomer.Value.AnredeMaybe.Should().Be(Maybe<Anrede>.None);
+        resultHomer.Value.OptionaleAnrede.Should().Be(Maybe<Anrede>.None);
     }
     
     [Theory]
@@ -85,7 +85,7 @@ public class Exercise2Tests
             var homer = resultHomer.Value!;
             homer.Vorname.Value.Should().Be("Homer");
             homer.Nachname.Value.Should().Be("Simpson");
-            homer.AnredeMaybe.Value.Value.Should().Be("Herr");
+            homer.OptionaleAnrede.Value.Value.Should().Be("Herr");
             homer.Postanschrift.Value.Should().Be("Evergreen Terrace 742");
         }
     }
@@ -162,7 +162,7 @@ public class Exercise2Tests
             var homer = grußkarte.Empfänger;
             homer.Vorname.Value.Should().Be("Homer");
             homer.Nachname.Value.Should().Be("Simpson");
-            homer.AnredeMaybe.Value.Value.Should().Be("Herr");
+            homer.OptionaleAnrede.Value.Value.Should().Be("Herr");
             homer.Postanschrift.Value.Should().Be("Evergreen Terrace 742");
         }
     }
