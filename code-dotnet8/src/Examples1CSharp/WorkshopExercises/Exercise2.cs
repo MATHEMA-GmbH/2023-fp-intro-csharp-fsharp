@@ -1,3 +1,4 @@
+using System.Globalization;
 using CSharpFunctionalExtensions;
 
 namespace Examples1CSharp.WorkshopExercises;
@@ -127,6 +128,13 @@ public record Empfänger(Vorname Vorname, Nachname Nachname, Maybe<Anrede> Optio
                         onFailure: Result.Failure<Empfänger>),
                 onFailure: Result.Failure<Empfänger>);
     }
+
+    // Placing this here is just my OO background. I would have placed the logic in the Anrede record.
+    public Maybe<Anrede> AnredeToUpper() =>
+        OptionaleAnrede
+            .Match(
+                Some: anrede => Anrede.Create(anrede.Value.ToUpper(CultureInfo.InvariantCulture)),
+                None: () => Maybe<Anrede>.None);
 }
 
 
