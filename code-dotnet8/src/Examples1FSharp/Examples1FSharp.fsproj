@@ -9,6 +9,7 @@
     <Compile Include="Example01ValueObject\People.fs" />
     <Compile Include="Example02Applicatives\Service.fs" />
     <Compile Include="FSharp8Features.fs" />
+    <Compile Include="WorkshopExercies\Exercise4.fs" />
   </ItemGroup>
 
 </Project>

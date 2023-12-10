@@ -8,6 +8,7 @@
     <Compile Include="DemoTests.fs" />
     <Compile Include="Example01ValueObject\PeopleTests.fs" />
     <Compile Include="Example02Applicatives\ServiceTests.fs" />
+    <Compile Include="WorkshopExercises\Exercise4Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
