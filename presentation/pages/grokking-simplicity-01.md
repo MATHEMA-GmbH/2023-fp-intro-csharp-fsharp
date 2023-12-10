@@ -1,6 +1,6 @@
 ---
 layout: image-right
-image: /images/book-grokking-simplicity.png
+image: //images/book-grokking-simplicity.png
 ---
 
 ### Alternative Beschreibung
