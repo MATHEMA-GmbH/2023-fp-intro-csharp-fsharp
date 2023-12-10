@@ -4,12 +4,15 @@ public static class Exercise1
 {
     public static double CalculateAverageSalary(IEnumerable<Person> people) =>
         people
-            .Select(person => person.Salary)
-            .Average(salary => salary.Value);
+            .Where(person => person.IsAdult())
+            .Average(person => person.Salary.Value);
 }
 
 // Immutable
-public record Person(Age Age, Salary Salary);
+public record Person(Age Age, Salary Salary)
+{
+    public bool IsAdult() => Age.IsAdult();
+}
 
 // Immutable Value Object (contains validation logic)
 public record Age
@@ -33,6 +36,8 @@ public record Age
     }
 
     private static bool IsValid(int age) => age > 0;
+    
+    public bool IsAdult() => Value >= 18;
 }
 
 // Immutable

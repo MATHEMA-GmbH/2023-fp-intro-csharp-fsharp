@@ -17,6 +17,6 @@ public class Exercise1Tests
 
         var averageSalary = Exercise1.CalculateAverageSalary(people);
 
-        averageSalary.Should().Be(3000);
+        averageSalary.Should().Be(3500);
     }
 }
