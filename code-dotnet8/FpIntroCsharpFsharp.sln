@@ -32,7 +32,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workshop", "src\Workshop\Wo
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WorkshopFSharp", "src\WorkshopFSharp\WorkshopFSharp.fsproj", "{39EBA30B-3117-40B2-8D01-CFA462C6000C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WokshopTests", "tests\WokshopTests\WokshopTests.csproj", "{FD37F693-F350-40C1-941C-72F5DDF60761}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopTests", "tests\WorkshopTests\WorkshopTests.csproj", "{FD37F693-F350-40C1-941C-72F5DDF60761}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WorkshopFSharpTests", "tests\WorkshopFSharpTests\WorkshopFSharpTests.fsproj", "{EEB23DCE-E1D7-4934-895C-0856E814172E}"
 EndProject
