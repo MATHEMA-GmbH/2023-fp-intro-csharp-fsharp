@@ -27,10 +27,12 @@ let ``We can use different assertion libraries - 3 - Unquote 2/2`` () =
 
 
 type GrußkarteDummy = { Text: string; Empfänger: string }
+type GrußkarteDummy2 = { Text: string; Empfänger: string }
 
 [<Fact>]
 let ``German Umlauts are no problem`` () =
-    let actual = { Text = "Hallo"; Empfänger = "Welt" }
-    let expected = { Text = "Hallo"; Empfänger = "Welt" }
+    let actual = { GrußkarteDummy.Text = "Hallo"; Empfänger = "Welt" }
+    let expected = { GrußkarteDummy.Text = "Hallo"; Empfänger = "Welt" }
+    
     actual =! expected
     
