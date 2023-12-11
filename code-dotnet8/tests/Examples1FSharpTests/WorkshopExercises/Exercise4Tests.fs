@@ -22,34 +22,37 @@ let erstelleGültigeGrußkarte
     
 let homer = erstelleGültigeGrußkarte "Homer" "Simpson" "Herr" "Evergreen Terrace 742" "Hallo Welt"
 
-let drucken grußkarte = Ok grußkarte
+let drucken grußkarte : Result<Grußkarte, string> = Ok grußkarte
 let verpacken grußkarte = Ok grußkarte
 let versenden grußkarte = Ok grußkarte
+let quittieren grußkarte = Ok grußkarte
 
-let druckenFehler grußkarte = Error "Drucken fehlgeschlagen"
+let druckenFehler grußkarte : Result<Grußkarte, string> =
+    Error "Drucken fehlgeschlagen"
 let verpackenFehler grußkarte = Error "Verpacken fehlgeschlagen"
 let versendenFehler grußkarte = Error "Versenden fehlgeschlagen"
+let quittierenFehler grußkarte = Error "Quittieren fehlgeschlagen"
 
 [<Fact>]
 let ``Workflow happy path`` () =
-    let actual = workflowApi drucken verpacken versenden homer 
+    let actual = workflowApi drucken verpacken versenden quittieren homer 
     let expected = Ok homer
     actual =! expected
 
 [<Fact>]
 let ``Workflow mit Druckfehler`` () =
-    let actual = workflowApi druckenFehler verpacken versenden homer 
+    let actual = workflowApi druckenFehler verpacken versenden quittieren homer 
     let expected = Error "Drucken fehlgeschlagen"
     actual =! expected
     
 [<Fact>]
 let ``Workflow mit Packfehler`` () =
-    let actual = workflowApi drucken verpackenFehler versenden homer 
+    let actual = workflowApi drucken verpackenFehler versenden quittieren homer 
     let expected = Error "Verpacken fehlgeschlagen"
     actual =! expected
     
 [<Fact>]
 let ``Workflow mit Versandfehler`` () =
-    let actual = workflowApi drucken verpacken versendenFehler homer 
+    let actual = workflowApi drucken verpacken versendenFehler quittieren homer 
     let expected = Error "Versenden fehlgeschlagen"
     actual =! expected

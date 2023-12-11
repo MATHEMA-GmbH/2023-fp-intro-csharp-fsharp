@@ -3,7 +3,7 @@ module Exercise4
 type Vorname = private Vorname of string
 
 module Vorname =
-    let create (vorname:string) =
+    let create (vorname:string) : Vorname option =
         if vorname.Length > 0 then
             Some (Vorname vorname)
         else
@@ -70,20 +70,23 @@ type Grußkarte = {
 type Drucken = Grußkarte -> Result<Grußkarte, string>
 type Verpacken = Grußkarte -> Result<Grußkarte, string>
 type Versenden = Grußkarte -> Result<Grußkarte, string>
+type Quittieren = Grußkarte -> Result<Grußkarte, string>
 
 type Workflow =
     Grußkarte
      -> Drucken
      -> Verpacken
      -> Versenden
+     -> Quittieren
      -> Result<Grußkarte, string> 
 
 let workflow : Workflow =
-    fun grußkarte drucken verpacken versenden ->
+    fun grußkarte drucken verpacken versenden quittieren ->
         grußkarte
         |> drucken
         |> Result.bind verpacken
         |> Result.bind versenden
+        |> Result.bind quittieren
         
-let workflowApi drucken verpacken versenden grußkarte =
-    workflow grußkarte drucken verpacken versenden
+let workflowApi drucken verpacken versenden quittieren grußkarte =
+    workflow grußkarte drucken verpacken versenden quittieren
