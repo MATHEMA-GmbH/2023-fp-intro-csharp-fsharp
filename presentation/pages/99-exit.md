@@ -43,6 +43,7 @@ Slides:
 
 - QR-Code 👉
 - https://mathema-gmbh.github.io/2023-12-it-tage-fp-intro-csharp-fsharp/
+- Code samples & workshop results: [Github Repository](https://github.com/MATHEMA-GmbH/2023-fp-intro-csharp-fsharp/tree/it-tage-workshop)
 
 ::right::
 
