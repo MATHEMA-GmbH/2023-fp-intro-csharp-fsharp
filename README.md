@@ -1,4 +1,4 @@
-# 2023-fp-intro-csharp-fsharp
+# Von C# zu F# - Einführung in die funktionale Programmierung
 
 ## Für Teilnehmer: Inhaltsbeschreibung
 
