@@ -54,4 +54,4 @@ Slides:
   
 <img 
   class="absolute bottom-0 right-50 w-60"
-  src="/images/qr-code-it-tage-frankfurt-2023.png" >
+  src="/images/qr-code-magdegeburger-devdays-2024.png" >
