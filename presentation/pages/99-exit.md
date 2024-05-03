@@ -35,14 +35,13 @@ layout: two-cols
 - <mdi-email /> patrick.drechsler@mathema.de
 - <logos-github-icon /> https://github.com/draptik
 - <mdi-web /> Blog: https://draptik.github.io
-- <logos-twitter /> ~~@drechsler~~ It was nice while it lasted
 - <logos-mastodon-icon /> @drechsler@floss.social
 - <logos-linkedin-icon /> https://www.linkedin.com/in/patrick-drechsler-draptik/
 
 Slides: 
 
 - QR-Code 👉
-- https://mathema-gmbh.github.io/2023-12-it-tage-fp-intro-csharp-fsharp/
+- https://mathema-gmbh.github.io/2024-05-md-dev-days-fp-intro-csharp-fsharp/
 
 ::right::
 
@@ -51,7 +50,7 @@ Slides:
 - <mdi-email /> martin.grotz@mathema.de
 - <logos-github-icon /> https://github.com/groma84
 - <mdi-web /> Blog: https://elm.finde-ich-super.de
-- <logos-mastodon-icon /> @groma@kanoa.de
+- <logos-linkedin-icon /> https://www.linkedin.com/in/martin-grotz/
   
 <img 
   class="absolute bottom-0 right-50 w-60"

@@ -1,125 +1,4 @@
-# Value Objects
-
-----
-
-## Value Objects
-
-Warum?
-
-- Methoden sollten nicht lügen!
-  - Null: NullPointerException, Null-Checks
-  - Antipattern: Primitive Obsession
-
-----
-
-### Beispiele
-
-```csharp
-// 😡
-void Einzahlen(int wert, SomeEnum waehrung) { /* ... */ }
-
-// 😀
-void Einzahlen(Geld geld) { /* ... */ }
-```
-
-```csharp
-class Kunde {
-    int Alter { get; set; } // 😡
-    
-    // ist `i` das aktuelle Alter oder das Geburtsjahr??
-    bool IstVolljaehrig(int i) { /* ... */}
-}
-
-class Kunde {
-    Alter Alter { get; set; } // 😀
-
-    bool IstVolljaehrig(Alter alter) { /* ... */}
-
-    bool IstVolljaehrig(Geburtsjahr geburtsjahr) { /* ... */}
-}
-```
-
----
-
-![img](/images/wikipedia-value-objects.png)
-
----
-
-## Value Objects
-
-- nur gültige Objekte erlaubt
-- immutable
-- equality by structure
-
----
-
-### Nur gültige Objekte
-
-Es muss bei der Erstellung gewährleistet sein, dass das Objekt gültig ist.
-
----
-
-### Nur gültige Objekte
-
-Optionen:
-
-- Konstruktor mit allen Parametern
-- statische Hilfsmethode & privater Konstruktor
-
----
-
-#### Value Objects erstellen / 1
-
-```csharp
-class Geld 
-{
-    int Betrag { get; }
-    Waehrung Waehrung { get; }
-
-    Geld(int betrag, Waehrung waehrung) {
-        if (!IsValid(betrag, Waehrung)) 
-            throw new InvalidGeldException();
-
-        Betrag = betrag;
-        Waehrung = waehrung;
-    }
-
-    bool IsValid(int betrag, Waehrung waehrung)
-        => betrag > 0 && waehrung != Waehrung.Undefined;
-}
-```
-
----
-
-#### Value Objects erstellen / 2
-
-```csharp
-class Geld 
-{
-    int Betrag { get; }
-    Waehrung Waehrung { get; }
-
-    static Geld Create(int betrag, Waehrung waehrung) {
-        return new Geld(betrag, waehrung);
-    }
-
-    // private ctor
-    private Geld(int betrag, Waehrung waehrung) {
-        if (!IsValid(betrag, Waehrung)) 
-            throw new InvalidGeldException();
-
-        Betrag = betrag;
-        Waehrung = waehrung;
-    }
-
-    bool IsValid(int betrag, Waehrung waehrung)
-        => betrag > 0 && waehrung != Waehrung.Undefined;
-}
-```
-
----
-
-### Immutability
+## Immutability in C#
 
 Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch **nach Erstellung nicht verändert wird**.
 
@@ -129,16 +8,11 @@ Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch
 
 ---
 
-### Equality by structure
+### C# 9 and greater...
 
-Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
+C# records sind ein erster Schritt in die richtige Richtung:
 
----
-
-### Exkurs: Vergleichbarkeit
-
-- Equality by reference
-- Equality by id
+- immutable
 - Equality by structure
 
 ---
@@ -156,14 +30,6 @@ override bool Equals(Geld other)
 
 override int GetHashCode() { /* ... */ }
 ```
-
----
-
-### C# 9 and greater...
-
-C# records sind ein erster Schritt in die richtige Richtung:
-
-- immutable
 
 ---
 

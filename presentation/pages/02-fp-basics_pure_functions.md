@@ -2,7 +2,7 @@
 
 ### Pure Functions in C# #
 
-- haben niemals Seiteneffekte!
+- haben keine Seiteneffekte
 - sollten immer nach `static` umwandelbar sein
 
 ---
@@ -54,3 +54,9 @@ var averageIncomeAbove25 = people
 
 - aussagekräftiger
 - weniger fehleranfällig
+
+---
+
+## Pure functions in LINQ
+
+- ihr macht schon FP: LINQ und Lambdas!

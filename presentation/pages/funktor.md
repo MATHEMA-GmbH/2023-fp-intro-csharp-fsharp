@@ -13,25 +13,6 @@
 
 ### Problem: Wert in Container, Funktion kann nichts damit anfangen
 
-```fsharp
-// F#
-module X
-
-let toUpper (s: string) : string = s.ToUpper()
-
-let stringToOption (s: string) : string option =
-    if String.IsNullOrWhiteSpace s then
-        None
-    else
-        Some s
-
-let nonEmptyStringToUpper (s: string) : ??? =
-    let nonEmpty = stringToOption s
-    // passt nicht: "string" erwartet, aber "string option" bekommen
-    let nonEmptyUpper = toUpper nonEmpty
-```
-
-----
 
 ```csharp
 // C#
@@ -56,6 +37,27 @@ static class X
 
 ----
 
+
+```fsharp
+// F#
+module X
+
+let toUpper (s: string) : string = s.ToUpper()
+
+let stringToOption (s: string) : string option =
+    if String.IsNullOrWhiteSpace s then
+        None
+    else
+        Some s
+
+let nonEmptyStringToUpper (s: string) : ??? =
+    let nonEmpty = stringToOption s
+    // passt nicht: "string" erwartet, aber "string option" bekommen
+    let nonEmptyUpper = toUpper nonEmpty
+```
+
+----
+
 ### Funktor ("Mappable")
 
 ![img](/images/Funktor_1.png)
@@ -75,7 +77,7 @@ static class X
 
 ----
 
-### Lösung: Wert in Container, Funktion kann nichts damit anfangen
+### Funktor = Lösung für "Wert in Container, Funktion kann nichts damit anfangen"
 
 - Option.map
 - List.map, Seq.map, Result.map, ...

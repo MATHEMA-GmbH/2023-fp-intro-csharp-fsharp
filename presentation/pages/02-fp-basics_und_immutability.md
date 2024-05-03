@@ -1,8 +1,9 @@
 ## FP 101
 
-- Immutability
 - Functions as First Class Citizens
-- Pure Functions
+- (Immutability)
+- (Pure Functions)
+- (Komposition)
 
 That's it!
 
@@ -40,25 +41,6 @@ Classic C#
 ```csharp
 int Add(int a, int b)
 {
-  return a + b;
-}
-```
-
-Expression body
-
-```csharp
-int Add(int a, int b) => a + b;
-```
-
----
-
-Syntax matters!
-
-Classic C#
-
-```csharp
-int Add(int a, int b)
-{
   Console.WriteLine("bla"); // <- side effect!
   return a + b;
 }
@@ -69,3 +51,5 @@ Expression body: Seiteneffekte sind schwieriger reinzubauen
 ```csharp
 int Add(int a, int b) => a + b;
 ```
+
+

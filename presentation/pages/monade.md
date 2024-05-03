@@ -43,7 +43,7 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 
 ---
 
-## Verkettung
+## Monade = Lösung für "Verkettung eingepackter Werte"
 
 ```fsharp
 let storeInDatabase (path: string) (content: string) : string option = 

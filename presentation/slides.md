@@ -5,8 +5,8 @@ defaults:
   layout: "default-with-footer"
 
 # infos for the footer (on slides with the default-with-footer layout)
-occasion: "IT-Tage 2023"
-occasionLogoUrl: "images/ITT-Logo-Farbe-2023.svg"
+occasion: "Magdeburger DevDays 2024"
+occasionLogoUrl: "images/magdeburger-dev-days-logo.jpeg"
 company: "MATHEMA GmbH"
 presenter: "Patrick Drechsler & Martin Grotz"
 contact: "patrick.drechsler@mathema.de & martin.grotz@mathema.de"
@@ -41,27 +41,11 @@ src: ./pages/02-fp-basics_pure_functions.md
 ---
 
 ---
-src: ./pages/02-fp-basics_pure_functions_aufgabe.md
----
-
----
-src: ./pages/grokking-simplicity-01.md
----
-
----
-src: ./pages/02-fp-basics_sprachen.md
----
-
----
 src: ./pages/option.md
 ---
 
 ---
 src: ./pages/layumba.md
----
-
----
-src: ./pages/option_aufgabe.md
 ---
 
 ---
@@ -77,10 +61,6 @@ src: ./pages/funktor.md
 ---
 
 ---
-src: ./pages/funktor_aufgabe.md
----
-
----
 src: ./pages/monade.md
 ---
 
@@ -89,29 +69,13 @@ src: ./pages/railway.md
 ---
 
 ---
-src: ./pages/monade_aufgabe.md
----
-
----
-src: ./pages/applicative.md
----
-
----
-src: ./pages/applicative_aufgabe.md
----
-
----
-src: ./pages/veranstaltungen.md
----
-
----
 src: ./pages/introducing_fsharp.md
 ---
 
 ---
-src: ./pages/fancy-fsharp8-features.md
+src: ./pages/99-exit.md
 ---
 
 ---
-src: ./pages/99-exit.md
+src: ./pages/applicative.md
 ---

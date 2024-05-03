@@ -26,20 +26,10 @@ layout: two-cols
 layout: two-cols-header
 ---
 
-## Vorstellungsrunde & Erwartungen
-
-::right::
-
-<img
-  class="absolute bottom-20 right-10 w-150"
-  src="/images/meerkats.jpg"
-/>
-
----
-
-## Lernziele
+## Agenda
 
 - Grundlagen der funktionalen Programmierung
-- Funktionale Programmierung mit C#
+- Warum funktionale Programmierung?
+- Funktionale Programmierung in C#
 - Grundlagen von F#
 - Grundlegende Konzepte der funktionalen Komposition

@@ -12,8 +12,6 @@ public string Stringify<T>(T data)
 }
 ```
 
-----
-
 ```csharp
 // Sind Magic Values eine gute Idee?
 public int Intify(string s)
@@ -21,29 +19,6 @@ public int Intify(string s)
     int result = -1;
     int.TryParse(s, out result);
     return result;
-}
-```
-
-----
-
-Gemein!
-
-```csharp
-public class Data
-{
-    public string Name;
-}
-
-public class Do
-{
-    public Data CreateData() => null;
-
-    public string CreateAndUseData()
-    {
-        var data = CreateData();
-        // kein null-Check -> ist dem Compiler egal
-        return data.Name;
-    }
 }
 ```
 
@@ -93,7 +68,6 @@ public string Stringify<T>(Option<T> data)
 ### Vorteile
 
 - Explizite Semantik: Wert ist da - oder eben nicht
-- Auch für Nicht-Programmierer verständlich(er): "optional" vs. "nullable"
 - Die Signatur von Match erzwingt eine Behandlung beider Fälle - nie wieder vergessene Null-Checks!
 - Achtung: In C# bleibt das Problem, dass "Option" auch ein Objekt ist - und daher selbst null sein kann
 - daher mindestens: in C# explizites NULL enablen mit `<Nullable>enable</Nullable>` 

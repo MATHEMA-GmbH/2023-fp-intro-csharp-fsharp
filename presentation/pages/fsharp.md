@@ -2,6 +2,15 @@
 
 ![img](/images/fsharp256.png)
 
+
+---
+
+## Warum?
+
+- weniger syntaktisches Rauschen
+- FP als default
+- "pit of success"
+
 ----
 
 ## F# #
@@ -167,51 +176,6 @@ let shoppingCart = {
     createdAt = System.DateTime.Now
 }
 ```
-
-----
-
-## ...Also known as...
-
-- Discriminated Union
-  - OR-Type
-  - Sum-Type: Der Zustand ergibt sich aus der Summe der Auswahlmöglichkeiten (*)
-- Record Type
-  - AND-Type
-  - Product-Type: Der Zustand ergibt sich aus dem kartesischen Produkt aller Möglichkeiten jedes Feldes (*)
-
-(*) Algebraic Data Types
-
-----
-
-### Algebraic Data Types: Sum Type
-
-```fsharp
-type Vehicle = Bike | Car | Bus
-```
-
-Alle möglichen Zustände von `Vehicle` sind: `Bike`, `Car`, oder `Bus`. 
-
-Dies entspricht der **Summe** der Auswahlmöglichkeiten.
-
-----
-
-### Algebraic Data Types: Product Type
-
-```fsharp
-type TruthTable {
-  Wert1: bool
-  Wert2: bool
-}
-```
-
-Alle möglichen Zustände von `TruthTable` sind:
-
-- `true`, `false`
-- `true`, `true`
-- `false`, `false`
-- `false`, `true`
-
-Diese Menge nennt man kartesisches **Produkt**.
 
 ----
 

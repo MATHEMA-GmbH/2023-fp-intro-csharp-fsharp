@@ -35,29 +35,7 @@
 
 ---
 
-### Builds
-
-- [FAKE](https://fake.build/) als erweiterbare DSL für Build-Tasks
-
-<img
-  class="absolute top-35 left-20 w-200"
-  src="/images/FAKE.png"
-/>
-
----
-
-### Builds
-
-- [Paket](https://github.com/fsprojects/Paket) als Alternative zu Nuget
-
-<img
-  class="absolute top-35 left-20 w-200"
-  src="/images/Paket.png"
-/>
-
----
-
-### Builds
+### Cloud
 
 - [Farmer](https://compositionalit.github.io/farmer/): Making repeatable Azure deployments easy!
 
@@ -75,17 +53,6 @@
 <img
   class="absolute top-45 left-40 w-130"
   src="/images/Fable.png"
-/>
-
----
-
-## Web
-
-- Mobile Apps mit [Fabulous](https://fabulous.dev/) (Xamarin)
-
-<img
-  class="absolute top-45 left-20 w-150"
-  src="/images/Fabulous.png"
 />
 
 ---

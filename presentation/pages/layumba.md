@@ -1,4 +1,4 @@
-### LaYumba
+### LaYumba für Didaktiv
 
 ![img](/images/book-csharp-fp-with-comment.png)
 
@@ -11,37 +11,10 @@
 
 ### language-ext
 
+- der Rundumschlag
+- komplex
+
 ![img](/images/language-ext-screenshot-github-0.png)
-
-----
-
-### language-ext
-
-![img](/images/language-ext-screenshot-github-1.png)
-
-----
-
-### language-ext
-
-![img](/images/language-ext-screenshot-github-2.png)
-
-----
-
-### language-ext
-
-![img](/images/language-ext-screenshot-github-3.png)
-
-----
-
-### language-ext
-
-![img](/images/language-ext-screenshot-github-4.png)
-
-----
-
-### language-ext
-
-![img](/images/language-ext-screenshot-github-5.png)
 
 ---
 

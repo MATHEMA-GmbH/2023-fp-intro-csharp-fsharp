@@ -1,4 +1,4 @@
-## Railway Oriented Programming
+## Praktische Anwendung: Railway Oriented Programming
 
 Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargestellt...
 
@@ -47,8 +47,6 @@ bool F3(string s) => s.F1().F2();
 
 Problem: Keine standardisierte Strategie für Fehlerbehandlung 
 
----
-
 - Wenn wir davon ausgehen, dass Funktionen auch einen Fehlerfall haben, benötigen wir einen **neuen Datentyp**, der das abbilden kann
 
 ---
@@ -58,6 +56,12 @@ Problem: Keine standardisierte Strategie für Fehlerbehandlung
 - kann entweder 
   - das Ergebnis beinhalten, oder 
   - einen Fehlerfall
+- `Either` besteht aus zwei Teilen
+  - `Left`
+  - `Right` ("richtig"...)
+- `Result` besteht aus zwei Teilen
+  - `Failure`
+  - `Success`
 
 ---
 
@@ -93,43 +97,5 @@ Problem: Keine standardisierte Strategie für Fehlerbehandlung
 
 - wenn die Eingabe fehlerhaft ist, muss die Funktion nichts tun, und kann den Fehler weiterreichen
 - wenn die Eingabe nicht fehlerhaft ist, wird der Wert an die Funktion gegeben
-
----
-
-```haskell
-bind: (string -> Result int) -> Result string -> Result int
-
-bind: (a -> M b) -> M a -> M b
-```
-
-- FP-Jargon: eine Wrapper-Klasse, die `bind` bereitstellt, wird **Monade** genannt (sehr stark vereinfacht!).
-
-
----
-
-- `Either` besteht aus zwei Teilen
-  - `Left`
-  - `Right` ("richtig"...)
-- `Result` besteht aus zwei Teilen
-  - `Failure`
-  - `Success`
-
----
-
-```csharp
-Option<string> IsValidOpt(string s) =>
-    string.IsNullOrEmpty(s)
-        ? None
-        : Some(s);
-```
-
-- `Option` hat `Some(T)` und `None`
-- `Either`/`Result` ist ähnlich zu `Option`
-- `None` wird durch `Failure`/`Left` ersetzt (frei wählbar, z.B. selbst definierter Error Typ).
-
-```csharp
-Either<string, string> IsValidEither(string s)
-    => string.IsNullOrEmpty(s)
-        ? (Either<string, string>) Left("ups")
-        : Right(s);
-```
+- Das ist genau die **Monade** mit ihrem **bind**
+- Damit können wir elegant beliebig lange Ketten bauen
