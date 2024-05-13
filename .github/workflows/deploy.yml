@@ -28,16 +28,11 @@ jobs:
             cd ${{ env.PRESENTATION_FOLDER }}
             npm install
 
-      - name: Install slidev
-        run:  |
-            cd ${{ env.PRESENTATION_FOLDER }}
-            npm run build -- --base '/${{ env.TARGET_REPO_NAME  }}/'
 
-      # Ensure to set the base directory to the current branch name
       - name: Build
         run: |
             cd ${{ env.PRESENTATION_FOLDER }}
-            slidev build --base '/${{ env.TARGET_REPO_NAME }}'
+            slidev build --base '/${{ env.TARGET_REPO_NAME }}/'
 
       - name: Deploy to target repository
         uses: JamesIves/github-pages-deploy-action@v4
