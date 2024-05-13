@@ -11,7 +11,7 @@ jobs:
     env:
       PRESENTATION_FOLDER: 'presentation'
       TARGET_REPO_NAME: '2024-05-md-dev-days-fp-intro-csharp-fsharp'
-      TARGET_GITHUB_OWNER: 'MATHEMA-GmbH'
+      TARGET_GITHUB_OWNER: 'draptik'
 
     runs-on: ubuntu-latest
 
@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
 
