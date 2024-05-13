@@ -2,7 +2,7 @@ name: Deploy pages
 on:
   push:
     branches:
-      - it-tage-frankfurt
+      - 2024-magdeburger-dev-days
       - main
 
 jobs:
@@ -10,24 +10,18 @@ jobs:
 
     env:
       PRESENTATION_FOLDER: 'presentation'
-      TARGET_REPO_NAME: '2023-12-it-tage-fp-intro-csharp-fsharp'
+      TARGET_REPO_NAME: '2024-05-md-dev-days-fp-intro-csharp-fsharp'
       TARGET_GITHUB_OWNER: 'MATHEMA-GmbH'
 
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: debugging
-        run: |
-            x=${{ secrets.MATHEMA_GH_TOKEN }}
-            n=${#x}
-            echo "Length of token is: $n"
-
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 'lts/*'
 
       - name: Install dependencies
         run: |
@@ -37,8 +31,7 @@ jobs:
       - name: Install slidev
         run:  |
             cd ${{ env.PRESENTATION_FOLDER }}
-            npm i -g @slidev/cli
-            npm i -g @slidev/theme-default unplugin-icons @iconify/json playwright-chromium
+            npm run build -- --base '/${{ env.TARGET_REPO_NAME  }}/'
 
       # Ensure to set the base directory to the current branch name
       - name: Build
