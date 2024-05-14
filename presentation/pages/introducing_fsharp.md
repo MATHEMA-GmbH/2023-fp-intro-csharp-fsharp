@@ -1,8 +1,8 @@
-## F# in bestehendes Projekt integrieren
+## F# in bestehendes Projekt integrieren 🧑
 
 ---
 
-### Tests
+### Tests 🧑
 
 - [FsUnit](https://github.com/fsprojects/FsUnit) für lesbarere Tests
 
@@ -13,7 +13,7 @@
 
 ---
 
-### Tests
+### Tests 🧑
 
 - [FsCheck](https://fscheck.github.io/FsCheck/) für Property Based Testing
 
@@ -24,7 +24,7 @@
 
 ---
 
-### Tests
+### Tests 🧑
 
 - [Unquote](https://github.com/SwensenSoftware/unquote) für besseren "Callstack" bei fehlschlagenden Tests
 
@@ -35,7 +35,7 @@
 
 ---
 
-### Cloud
+### Cloud 🧑
 
 - [Farmer](https://compositionalit.github.io/farmer/): Making repeatable Azure deployments easy!
 
@@ -46,7 +46,7 @@
 
 ---
 
-## Web
+## Web 🧑
 
 - Webseiten mit [Fable](https://fable.io/)
 
@@ -57,7 +57,7 @@
 
 ---
 
-## Web
+## Web 🧑
 
 - Full-Stack-Webanwendungen mit dem SAFE-Stack
 

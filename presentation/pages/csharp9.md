@@ -1,4 +1,4 @@
-### C# 9 and greater...
+### C# 9 and greater... 🧔🏻
 
 - (✅) record types
 - 💥 discriminated unions (Tip on next slide)
@@ -13,7 +13,7 @@ https://twitter.com/dsymetweets/status/1294280620823240706
 layout: two-cols
 ---
 
-### Discriminated Unions in C#
+### Discriminated Unions in C# 🧔🏻
 
 
 ```csharp

@@ -1,4 +1,4 @@
-## FP 101
+## FP 101 🧑 🧔🏻
 
 - Functions as First Class Citizens
 - (Immutability)
@@ -9,7 +9,7 @@ That's it!
 
 ---
 
-### Immutability in C# #
+### Immutability in C#  🧔🏻 #
 
 ```csharp
 public class Customer
@@ -34,7 +34,7 @@ public class Customer
 
 ---
 
-Syntax matters!
+Syntax matters!  🧔🏻
 
 Classic C#
 

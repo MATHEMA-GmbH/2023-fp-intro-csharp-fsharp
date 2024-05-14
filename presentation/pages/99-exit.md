@@ -54,4 +54,4 @@ Slides:
   
 <img 
   class="absolute bottom-0 right-50 w-60"
-  src="/images/qr-code-magdegeburger-devdays-2024-draptik.png" >
+  src="/images/qr-code-magdeburger-devdays-2024-draptik.png" >

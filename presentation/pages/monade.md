@@ -1,4 +1,4 @@
-### Problem: Verkettung eingepackter Werte
+### Problem: Verkettung eingepackter Werte 🧑
 
 ```fsharp
 let storeInDatabase (path: string) (content: string) : string option = 
@@ -24,13 +24,13 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 
 ----
 
-### Monade ("Chainable")
+### Monade ("Chainable") 🧑
 
 ![img](/images/Monade_1.png)
 
 ----
 
-### Monade ("Chainable")
+### Monade ("Chainable") 🧑
 
 - Container mit "bind" Funktion (die bestimmten Regeln folgt): "Chainable"
 - Bezeichnung in der FP-Welt: **Monade**
@@ -43,7 +43,7 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 
 ---
 
-## Monade = Lösung für "Verkettung eingepackter Werte"
+## Monade = Lösung für "Verkettung eingepackter Werte" 🧑
 
 ```fsharp
 let storeInDatabase (path: string) (content: string) : string option = 

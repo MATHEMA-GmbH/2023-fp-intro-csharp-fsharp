@@ -1,4 +1,4 @@
-## FP 101 - functions
+## FP 101 - functions 🧔🏻
 
 ### 1st class functions in C#
 
@@ -6,7 +6,7 @@ Funktionen können als Parameter verwendet werden
 
 ---
 
-#### Strategy-Pattern
+#### Strategy-Pattern 🧔🏻
 
 ```csharp
 interface ICalculateSalary
@@ -32,7 +32,7 @@ class SomeService
 
 ---
 
-### Funktionen als Rückgabewert
+### Funktionen als Rückgabewert 🧔🏻
 
 ```csharp
 

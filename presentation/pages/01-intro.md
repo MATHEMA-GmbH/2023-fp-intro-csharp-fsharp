@@ -2,7 +2,7 @@
 layout: two-cols
 ---
 
-## Patrick Drechsler
+## Patrick Drechsler 🧔🏻
 
 - Software Entwickler
 - Beruflich: C#
@@ -13,7 +13,7 @@ layout: two-cols
 
 ::right::
 
-## Martin Grotz
+## Martin Grotz 🧑
 
 - Team Lead
 - Beruflich: C#, TypeScript/JavaScript
@@ -26,7 +26,7 @@ layout: two-cols
 layout: two-cols-header
 ---
 
-## Agenda
+## Agenda 🧔🏻
 
 - Grundlagen der funktionalen Programmierung
 - Warum funktionale Programmierung?

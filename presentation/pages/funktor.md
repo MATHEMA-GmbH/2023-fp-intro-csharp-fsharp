@@ -1,18 +1,17 @@
-## "Programming Patterns" in FP
+## "Programming Patterns" in FP 🧑
 
 ![Scott Wlaschin shows FP patterns in one of his talks](/images/patterns-and-principles-in-fp.png)
 
 ----
 
-## Kleine Funktionen zu größeren verbinden
+## Kleine Funktionen zu größeren verbinden 🧑
 
 - Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt ("Komposition")
 - Problem: Nicht alle Funktionen passen gut zusammen
 
 ----
 
-### Problem: Wert in Container, Funktion kann nichts damit anfangen
-
+### Problem: Wert in Container, Funktion kann nichts damit anfangen 🧑
 
 ```csharp
 // C#
@@ -37,6 +36,7 @@ static class X
 
 ----
 
+### Problem: Wert in Container, Funktion kann nichts damit anfangen 🧑
 
 ```fsharp
 // F#
@@ -58,13 +58,13 @@ let nonEmptyStringToUpper (s: string) : ??? =
 
 ----
 
-### Funktor ("Mappable")
+### Funktor ("Mappable") 🧑
 
 ![img](/images/Funktor_1.png)
 
 ----
 
-### Funktor ("Mappable")
+### Funktor ("Mappable") 🧑
 
 - Container mit "map" Funktion (die bestimmten Regeln folgt): "Mappable"
 - Bezeichnung in der FP-Welt: **Funktor**
@@ -77,7 +77,7 @@ let nonEmptyStringToUpper (s: string) : ??? =
 
 ----
 
-### Funktor = Lösung für "Wert in Container, Funktion kann nichts damit anfangen"
+### Funktor = Lösung für "Wert in Container, Funktion kann nichts damit anfangen" 🧑
 
 - Option.map
 - List.map, Seq.map, Result.map, ...

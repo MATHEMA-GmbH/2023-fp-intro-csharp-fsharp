@@ -1,4 +1,4 @@
-## FP 101 - Pure Functions
+## FP 101 - Pure Functions 🧔🏻
 
 ### Pure Functions in C# #
 
@@ -7,7 +7,7 @@
 
 ---
 
-## Imperativ...
+## Imperativ... 🧔🏻
 
 **Wie** mache ich etwas 
 
@@ -33,7 +33,7 @@ versus...
 
 ----
 
-## Deklarativ
+## Deklarativ 🧔🏻
 
 **Was** will ich erreichen?
 
@@ -57,6 +57,6 @@ var averageIncomeAbove25 = people
 
 ---
 
-## Pure functions in LINQ
+## Pure functions in LINQ 🧔🏻
 
 - ihr macht schon FP: LINQ und Lambdas!

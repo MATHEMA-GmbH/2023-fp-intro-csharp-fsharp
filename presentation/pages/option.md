@@ -1,8 +1,10 @@
-## Mögliches Vorhandensein eines Werts
+## Mögliches Vorhandensein eines Werts 🧑
 
 #### oder: null ist gefährlich.
 
 ----
+
+### Enthält die Signatur die ganze Wahrheit? 🧑
 
 ```csharp
 // Enthält die Signatur die ganze Wahrheit?
@@ -24,7 +26,7 @@ public int Intify(string s)
 
 ----
 
-## Option
+## Option 🧑
 
 ```fsharp
 type Option<'T> = Some<'T> | None
@@ -36,7 +38,7 @@ type Option<'T> = Some<'T> | None
 
 ----
 
-## Mit Option
+## Mit Option 🧑
 
 ```csharp
 public Option<int> IntifyOption(string s)
@@ -49,7 +51,7 @@ public Option<int> IntifyOption(string s)
 
 ----
 
-### Wie komme ich an einen eingepackten Wert ran?
+### Wie komme ich an einen eingepackten Wert ran? 🧑
 
 > **Pattern matching** allows you to match a value against some patterns to select a branch of the code.
 
@@ -65,7 +67,7 @@ public string Stringify<T>(Option<T> data)
 
 ----
 
-### Vorteile
+### Vorteile 🧑
 
 - Explizite Semantik: Wert ist da - oder eben nicht
 - Die Signatur von Match erzwingt eine Behandlung beider Fälle - nie wieder vergessene Null-Checks!

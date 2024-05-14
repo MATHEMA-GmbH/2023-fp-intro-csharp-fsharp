@@ -1,4 +1,4 @@
-## Immutability in C#
+## Immutability in C#  🧔🏻
 
 Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch **nach Erstellung nicht verändert wird**.
 
@@ -8,7 +8,7 @@ Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch
 
 ---
 
-### C# 9 and greater...
+### C# 9 and greater... 🧔🏻
 
 C# records sind ein erster Schritt in die richtige Richtung:
 
@@ -17,7 +17,7 @@ C# records sind ein erster Schritt in die richtige Richtung:
 
 ---
 
-### Equality by structure
+### Equality by structure 🧔🏻
 
 Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 
@@ -33,7 +33,7 @@ override int GetHashCode() { /* ... */ }
 
 ---
 
-### Exkurs
+### Exkurs 🧔🏻
 
 - manchmal genügt ein (leichtgewichtiges C#) record
 - aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Objekt, DDD)

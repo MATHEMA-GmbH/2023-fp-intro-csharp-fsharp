@@ -1,4 +1,4 @@
-### LaYumba für Didaktiv
+### LaYumba für Didaktik 🧔🏻
 
 ![img](/images/book-csharp-fp-with-comment.png)
 
@@ -9,7 +9,7 @@
 
 ----
 
-### language-ext
+### language-ext 🧔🏻
 
 - der Rundumschlag
 - komplex
@@ -18,7 +18,7 @@
 
 ---
 
-### Mittelweg: C# Functional Extensions
+### Mittelweg: C# Functional Extensions 🧔🏻
 
 - Nuget-Paket: [https://github.com/vkhorikov/CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions)
 - hat alles was man braucht, ohne zu kompliziert zu sein
