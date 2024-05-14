@@ -41,7 +41,7 @@ layout: two-cols
 Slides: 
 
 - QR-Code 👉
-- https://mathema-gmbh.github.io/2024-05-md-dev-days-fp-intro-csharp-fsharp/
+- https://draptik.github.io/2024-05-md-dev-days-fp-intro-csharp-fsharp/
 
 ::right::
 
@@ -54,4 +54,4 @@ Slides:
   
 <img 
   class="absolute bottom-0 right-50 w-60"
-  src="/images/qr-code-magdegeburger-devdays-2024.png" >
+  src="/images/qr-code-magdegeburger-devdays-2024-draptik.png" >
