@@ -11,7 +11,7 @@ jobs:
     env:
       PRESENTATION_FOLDER: 'presentation'
       TARGET_REPO_NAME: '2024-05-md-dev-days-fp-intro-csharp-fsharp'
-      TARGET_GITHUB_OWNER: 'draptik'
+      TARGET_GITHUB_OWNER: 'MATHEMA-GmbH'
 
     runs-on: ubuntu-latest
 
@@ -40,4 +40,4 @@ jobs:
           single-commit: true
           folder: ${{ env.PRESENTATION_FOLDER }}/dist # The folder the action should deploy
           repository-name: '${{ env.TARGET_GITHUB_OWNER }}/${{ env.TARGET_REPO_NAME }}'
-          token: ${{ secrets.SLIDEV_TOKEN }}
+          token: ${{ secrets.MATHEMA_GH_TOKEN }}
